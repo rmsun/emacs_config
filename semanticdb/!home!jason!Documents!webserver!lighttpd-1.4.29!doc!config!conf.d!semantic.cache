@@ -1,0 +1,19 @@
+;; Object conf.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf.d/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("access_log.conf" "auth.conf" "cgi.conf" "cml.conf" "compress.conf" "debug.conf" "dirlisting.conf" "evhost.conf" "expire.conf" "fastcgi.conf" "geoip.conf" "magnet.conf" "mime.conf" "mod.template" "mysql_vhost.conf" "proxy.conf" "rrdtool.conf" "scgi.conf" "secdownload.conf" "simple_vhost.conf" "ssi.conf" "status.conf" "trigger_b4_dl.conf" "userdir.conf" "webdav.conf")) nil [1 403]))          
+    :file "Makefile.am"
+    :pointmax 403
+    :fsize 402
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!config!conf.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

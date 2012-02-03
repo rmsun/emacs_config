@@ -1,0 +1,18 @@
+class CThreadManage
+{
+private:
+     CThreadPool *m_pool;
+     int m_NumOfThread;
+     
+protected:
+     
+public:
+     CThreadManage();
+     CThreadManage(int num);
+     virtual ~CThreadManage();
+     
+     void SetParallelNum(int num);
+     void Run(CJob *job, void *jobdata);
+     void TerminateAll(void);
+};
+

@@ -1,0 +1,41 @@
+#include "stack.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+     int n;
+     printf("= = = = = = = = = = = = = = = = = = = = = = = =\n");
+     printf("This is a test program for stack_no_duplicates\n");
+     printf("= = = = = = = = = = = = = = = = = = = = = = = =\n");
+     printf("\n");
+     printf("now input stack's capacity : ");
+     scanf("%d", &n);
+     stackInit(n);
+     printf("\nnow please input command (1) push (2) pop : ");
+     scanf("%d", &n);
+     switch(n)
+     {
+     case 1:
+          printf("\nplease input the number you want to push into stack : ");
+          scnaf("%d", &n);
+          stackPush(n);
+          printf("\nnow the stack is : ", stackPrint());
+          printf("\nnow please input command (1) push (2) pop : ");
+          scanf("%d", &n);
+          continue;
+     case 2:
+          printf("\nthe top of the stack is : %d", stackPop());
+          printf("\nnow the stack is : ", stackPrint());
+          printf("\nnow please input command (1) push (2) pop : ");
+          scanf("%d", &n);
+          continue;
+     case 0:
+          return 0;
+     default:
+          printf("\command error!!");
+          printf("\nnow please input command (1) push (2) pop : ");
+          scanf("%d", &n);
+          continue;
+     }
+     

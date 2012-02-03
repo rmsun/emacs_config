@@ -1,0 +1,118 @@
+;; Object BitTorrent-4.4.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "BitTorrent-4.4.0/"
+  :tables (list 
+   (semanticdb-table "bittorrent-console.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("__future__" include nil nil [620 651])
+            ("BitTorrent.platform" include nil nil [653 704])
+            ("install_translation" code nil nil [705 726])
+            ("sys" include nil nil [728 738])
+            ("os" include nil nil [739 748])
+            ("threading" include nil nil [749 765])
+            ("time" include nil nil [766 797])
+            ("cStringIO" include nil nil [798 828])
+            ("BitTorrent.download" include nil nil [830 884])
+            ("BitTorrent.defaultargs" include nil nil [885 932])
+            ("BitTorrent.parseargs" include nil nil [933 975])
+            ("BitTorrent.zurllib" include nil nil [976 1014])
+            ("BitTorrent.bencode" include nil nil [1015 1053])
+            ("BitTorrent.ConvertedMetainfo" include nil nil [1054 1112])
+            ("BitTorrent.prefs" include nil nil [1113 1153])
+            ("BitTorrent" include nil nil [1154 1187])
+            ("BitTorrent" include nil nil [1188 1220])
+            ("BitTorrent" include nil nil [1221 1251])
+            ("BitTorrent" include nil nil [1252 1285])
+            ("fmttime" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [1300 1301]))              ) nil [1288 1581])
+            ("fmtsize" function (:arguments 
+              ( ("n" variable nil (reparse-symbol function_parameters) [1594 1595]))              ) nil [1582 2003])
+            ("HeadlessDisplayer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2056 2060])
+                        ("doneflag" variable nil (reparse-symbol function_parameters) [2062 2070]))                      ) (reparse-symbol indented_block_body) [2043 2466])
+                    ("set_torrent_values" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2494 2498])
+                        ("name" variable nil (reparse-symbol function_parameters) [2500 2504])
+                        ("path" variable nil (reparse-symbol function_parameters) [2506 2510])
+                        ("size" variable nil (reparse-symbol function_parameters) [2512 2516])
+                        ("numpieces" variable nil (reparse-symbol function_parameters) [2518 2527]))                      ) (reparse-symbol indented_block_body) [2471 2659])
+                    ("finished" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2677 2681]))                      ) (reparse-symbol indented_block_body) [2664 2816])
+                    ("error" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2831 2835])
+                        ("errormsg" variable nil (reparse-symbol function_parameters) [2837 2845]))                      ) (reparse-symbol indented_block_body) [2821 2966])
+                    ("display" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2983 2987])
+                        ("statistics" variable nil (reparse-symbol function_parameters) [2989 2999]))                      ) (reparse-symbol indented_block_body) [2971 5615])
+                    ("print_spew" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5635 5639])
+                        ("spew" variable nil (reparse-symbol function_parameters) [5641 5645]))                      ) (reparse-symbol indented_block_body) [5620 6920]))                  
+                :type "class")
+                nil [2005 6920])
+            ("self" code nil nil [3658 3710])
+            ("DL" type
+               (:superclasses ("Feedback")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6960 6964])
+                        ("metainfo" variable nil (reparse-symbol function_parameters) [6966 6974])
+                        ("config" variable nil (reparse-symbol function_parameters) [6976 6982]))                      ) (reparse-symbol indented_block_body) [6947 7117])
+                    ("run" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [7130 7134]))                      ) (reparse-symbol indented_block_body) [7122 8508])
+                    ("reread_config" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8531 8535]))                      ) (reparse-symbol indented_block_body) [8513 9280])
+                    ("get_status" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9300 9304]))                      ) (reparse-symbol indented_block_body) [9285 9540])
+                    ("global_error" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9562 9566])
+                        ("level" variable nil (reparse-symbol function_parameters) [9568 9573])
+                        ("text" variable nil (reparse-symbol function_parameters) [9575 9579]))                      ) (reparse-symbol indented_block_body) [9545 9609])
+                    ("error" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9624 9628])
+                        ("torrent" variable nil (reparse-symbol function_parameters) [9630 9637])
+                        ("level" variable nil (reparse-symbol function_parameters) [9639 9644])
+                        ("text" variable nil (reparse-symbol function_parameters) [9646 9650]))                      ) (reparse-symbol indented_block_body) [9614 9680])
+                    ("failed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9696 9700])
+                        ("torrent" variable nil (reparse-symbol function_parameters) [9702 9709])
+                        ("is_external" variable nil (reparse-symbol function_parameters) [9711 9722]))                      ) (reparse-symbol indented_block_body) [9685 9753])
+                    ("finished" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9771 9775])
+                        ("torrent" variable nil (reparse-symbol function_parameters) [9777 9784]))                      ) (reparse-symbol indented_block_body) [9758 9813]))                  
+                :type "class")
+                nil [6922 9813])
+            ("if" code nil nil [9815 10826]))          
+    :file "bittorrent-console.py"
+    :pointmax 10826
+    :fsize 10839
+    :lastmodtime '(20148 55072)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "BitTorrent"
+    :file "BitTorrent"
+    :fsize 4096
+    :lastmodtime '(20149 11394)
+    )
+   (semanticdb-table "bittorrent-tracker.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("if" code nil nil [590 699])
+            ("os" include nil nil [700 709])
+            ("sys" include nil nil [710 730])
+            ("BitTorrent.track" include nil nil [731 765])
+            ("if" code nil nil [767 814]))          
+    :file "bittorrent-tracker.py"
+    :pointmax 814
+    :fsize 813
+    :lastmodtime '(17375 50596)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!p2p source code!BitTorrent-4.4.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,19 @@
+;; Object initscripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "initscripts/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("rc.lighttpd" "rc.lighttpd.redhat" "sysconfig.lighttpd")) nil [1 62]))          
+    :file "Makefile.am"
+    :pointmax 62
+    :fsize 61
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!initscripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

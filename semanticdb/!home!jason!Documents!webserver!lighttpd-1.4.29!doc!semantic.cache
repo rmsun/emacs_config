@@ -1,0 +1,21 @@
+;; Object doc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "doc/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("config" "scripts" "initscripts" "outdated")) nil [1 45])
+            ("dist_man8_MANS" variable (:default-value ("lighttpd.8")) nil [45 71])
+            ("EXTRA_DIST" variable (:default-value ("newstyle.css" "oldstyle.css")) nil [72 116]))          
+    :file "Makefile.am"
+    :pointmax 116
+    :fsize 115
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

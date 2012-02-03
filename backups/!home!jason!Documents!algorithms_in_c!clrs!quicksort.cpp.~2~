@@ -1,0 +1,55 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int  partion(int *a, int p, int r)
+{
+    int x = *(a+r);
+    int i  = p - 1;
+    for (int j = p; j < r; j++)
+    {
+        if (*(a+j) <= x)
+        {
+            i = i + 1;
+            int temp = *(a+j);
+            *(a+j) = *(a+i);
+            *(a+i) = temp;
+        }
+    }
+    int temp = *(a+i+1);
+    *(a+i+1) = x;
+    x = temp;
+    return i+1;
+}
+
+void quick_sort(int *a, int p, int r)
+{
+    if (p < r)
+    {
+        int q = partion(a, p, r);
+        quick_sort(a, p, q-1);
+        quick_sort(a, q+1, r);
+    }
+}
+
+int
+main(int argc, char *argv[])
+{
+    int n, temp;
+    cout << "please input the number of the values that need to sort: " << endl;
+    cin >> n;
+    int *a = (int *)malloc(n * sizeof(int));
+    cout << "please input each value: " << endl;
+    
+    for (int i = 0; i < n; i++)
+        cin >> *(a+i);
+    
+    quick_sort(a, 0, n-1);
+    cout << "the value after sort: " << endl;
+    for (int i = 0; i < n; i++)
+        cout << *(a+i) << " ";
+    cout << endl;
+    free(a);
+}
+

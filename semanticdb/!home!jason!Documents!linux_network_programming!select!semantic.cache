@@ -1,0 +1,96 @@
+;; Object select/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "select/"
+  :tables (list 
+   (semanticdb-table "strcliselect01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("str_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39 48])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [49 60]))                  
+                :type "void")
+                nil [26 918]))          
+    :file "strcliselect01.c"
+    :pointmax 919
+    :fsize 918
+    :lastmodtime '(20151 53023)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "strcliselect02.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("str_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39 48])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [49 60]))                  
+                :type "void")
+                nil [26 1388]))          
+    :file "strcliselect02.c"
+    :pointmax 1389
+    :fsize 1388
+    :lastmodtime '(20156 56332)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpservselect01.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "tcpservselect01.c"
+    :pointmax 2211
+    :fsize 2871
+    :lastmodtime '(20160 31652)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpcliselect02.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [34 43])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44 57]))                  
+                :type "int")
+                nil [25 678]))          
+    :file "tcpcliselect02.c"
+    :pointmax 679
+    :fsize 678
+    :lastmodtime '(20156 56177)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpservpoll01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35 44])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45 58]))                  
+                :type "int")
+                nil [26 3294]))          
+    :file "tcpservpoll01.c"
+    :pointmax 3272
+    :fsize 3294
+    :lastmodtime '(20160 45111)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!linux_network_programming!select!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

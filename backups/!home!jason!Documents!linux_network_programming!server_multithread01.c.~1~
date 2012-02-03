@@ -1,0 +1,17 @@
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <time.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include "error.h"
+
+#define BUFFLEN 1024
+#define SERVER_PORT 8888
+#define LISTENQ 5
+
+static void handle_request(void *argv)
+{
+     int s_c = *((int *)argv);                   /**/
+     

@@ -1,0 +1,9 @@
+;;desktop-save setting
+(setq desktop-base-file-name "emacs.desktop")
+(setq desktop-base-lock-name "emacs.desktop.lock")
+(setq desktop-path (quote ("~/.emacs.d/plugins/cachedate" "." "~")))
+(setq desktop-path (quote ("/home/geekard/.emacs.d/plugins/cachedate" "." "~")))
+(desktop-save-mode 1)
+;;以下两行在daemon 、client环境下使用emacs时必须添加
+(desktop-load-default)
+(desktop-read)

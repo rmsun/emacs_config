@@ -1,0 +1,443 @@
+;; Object asm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm/"
+  :tables (list 
+   (semanticdb-table "ioctls.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("asm-generic/ioctls.h" include (:system-flag t) nil [1 32]))          
+    :file "ioctls.h"
+    :pointmax 33
+    :fsize 32
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sigcontext.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ASM_X86_SIGCONTEXT_H" variable (:constant-flag t) nil [39 60])
+            ("linux/types.h" include (:system-flag t) nil [63 87])
+            ("FP_XSTATE_MAGIC1" variable (:constant-flag t) nil [97 113])
+            ("FP_XSTATE_MAGIC2" variable (:constant-flag t) nil [134 150])
+            ("FP_XSTATE_MAGIC2_SIZE" variable (:constant-flag t) nil [171 192])
+            ("_fpx_sw_bytes" type
+               (:members 
+                  ( ("magic1" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [848 861])
+                    ("extended_size" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [887 907])
+                    ("xstate_bv" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [999 1015])
+                    ("xstate_size" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1135 1153])
+                    ("padding" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1307 1324]))                  
+                :type "struct")
+                nil [824 1350])
+            ("_fpreg" type
+               (:members 
+                  ( ("significand" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [1906 1936])
+                    ("exponent" variable (:type "unsigned short") (reparse-symbol classsubparts) [1938 1962]))                  
+                :type "struct")
+                nil [1889 1965])
+            ("_fpxreg" type
+               (:members 
+                  ( ("significand" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [1985 2015])
+                    ("exponent" variable (:type "unsigned short") (reparse-symbol classsubparts) [2017 2041])
+                    ("padding" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol classsubparts) [2043 2069]))                  
+                :type "struct")
+                nil [1967 2072])
+            ("_xmmreg" type
+               (:members 
+                  ( ("element" variable
+                       (:dereference 1
+                        :type "unsigned long")
+                        (reparse-symbol classsubparts) [2092 2117]))                  
+                :type "struct")
+                nil [2074 2120])
+            ("_fpstate" type
+               (:members 
+                  ( ("cw" variable (:type "unsigned long") (reparse-symbol classsubparts) [2172 2189])
+                    ("sw" variable (:type "unsigned long") (reparse-symbol classsubparts) [2191 2208])
+                    ("tag" variable (:type "unsigned long") (reparse-symbol classsubparts) [2210 2228])
+                    ("ipoff" variable (:type "unsigned long") (reparse-symbol classsubparts) [2230 2250])
+                    ("cssel" variable (:type "unsigned long") (reparse-symbol classsubparts) [2252 2272])
+                    ("dataoff" variable (:type "unsigned long") (reparse-symbol classsubparts) [2274 2296])
+                    ("datasel" variable (:type "unsigned long") (reparse-symbol classsubparts) [2298 2320])
+                    ("_st" variable
+                       (:dereference 1
+                        :type ("_fpreg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2322 2343])
+                    ("status" variable (:type "unsigned short") (reparse-symbol classsubparts) [2345 2367])
+                    ("magic" variable (:type "unsigned short") (reparse-symbol classsubparts) [2369 2390])
+                    ("_fxsr_env" variable
+                       (:dereference 1
+                        :type "unsigned long")
+                        (reparse-symbol classsubparts) [2459 2486])
+                    ("mxcsr" variable (:type "unsigned long") (reparse-symbol classsubparts) [2518 2538])
+                    ("reserved" variable (:type "unsigned long") (reparse-symbol classsubparts) [2540 2563])
+                    ("_fxsr_st" variable
+                       (:dereference 1
+                        :type ("_fpxreg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2565 2592])
+                    ("_xmm" variable
+                       (:dereference 1
+                        :type ("_xmmreg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2629 2652])
+                    ("padding1" variable
+                       (:dereference 1
+                        :type "unsigned long")
+                        (reparse-symbol classsubparts) [2654 2681])
+                    ("" type
+                       (:members 
+                          ( ("padding2" variable
+                               (:dereference 1
+                                :type "unsigned long")
+                                (reparse-symbol classsubparts) [2694 2721])
+                            ("sw_reserved" variable (:type ("_fpx_sw_bytes" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol classsubparts) [2724 2757]))                          
+                        :type "union")
+                        (reparse-symbol classsubparts) [2684 2813]))                  
+                :type "struct")
+                nil [2122 2816])
+            ("X86_FXSR_MAGIC" variable (:constant-flag t) nil [2826 2840])
+            ("sigcontext" type
+               (:members 
+                  ( ("__gsh" variable (:type "unsigned short") (reparse-symbol classsubparts) [2932 2957])
+                    ("gs" variable (:type "unsigned short") (reparse-symbol classsubparts) [2932 2957])
+                    ("__fsh" variable (:type "unsigned short") (reparse-symbol classsubparts) [2959 2984])
+                    ("fs" variable (:type "unsigned short") (reparse-symbol classsubparts) [2959 2984])
+                    ("__esh" variable (:type "unsigned short") (reparse-symbol classsubparts) [2986 3011])
+                    ("es" variable (:type "unsigned short") (reparse-symbol classsubparts) [2986 3011])
+                    ("__dsh" variable (:type "unsigned short") (reparse-symbol classsubparts) [3013 3038])
+                    ("ds" variable (:type "unsigned short") (reparse-symbol classsubparts) [3013 3038])
+                    ("edi" variable (:type "unsigned long") (reparse-symbol classsubparts) [3040 3058])
+                    ("esi" variable (:type "unsigned long") (reparse-symbol classsubparts) [3060 3078])
+                    ("ebp" variable (:type "unsigned long") (reparse-symbol classsubparts) [3080 3098])
+                    ("esp" variable (:type "unsigned long") (reparse-symbol classsubparts) [3100 3118])
+                    ("ebx" variable (:type "unsigned long") (reparse-symbol classsubparts) [3120 3138])
+                    ("edx" variable (:type "unsigned long") (reparse-symbol classsubparts) [3140 3158])
+                    ("ecx" variable (:type "unsigned long") (reparse-symbol classsubparts) [3160 3178])
+                    ("eax" variable (:type "unsigned long") (reparse-symbol classsubparts) [3180 3198])
+                    ("trapno" variable (:type "unsigned long") (reparse-symbol classsubparts) [3200 3221])
+                    ("err" variable (:type "unsigned long") (reparse-symbol classsubparts) [3223 3241])
+                    ("eip" variable (:type "unsigned long") (reparse-symbol classsubparts) [3243 3261])
+                    ("__csh" variable (:type "unsigned short") (reparse-symbol classsubparts) [3263 3288])
+                    ("cs" variable (:type "unsigned short") (reparse-symbol classsubparts) [3263 3288])
+                    ("eflags" variable (:type "unsigned long") (reparse-symbol classsubparts) [3290 3311])
+                    ("esp_at_signal" variable (:type "unsigned long") (reparse-symbol classsubparts) [3313 3341])
+                    ("__ssh" variable (:type "unsigned short") (reparse-symbol classsubparts) [3343 3368])
+                    ("ss" variable (:type "unsigned short") (reparse-symbol classsubparts) [3343 3368])
+                    ("fpstate" variable
+                       (:pointer 1
+                        :type ("_fpstate" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3370 3395])
+                    ("oldmask" variable (:type "unsigned long") (reparse-symbol classsubparts) [3397 3419])
+                    ("cr2" variable (:type "unsigned long") (reparse-symbol classsubparts) [3421 3439]))                  
+                :type "struct")
+                nil [2911 3442])
+            ("_xsave_hdr" type
+               (:members 
+                  ( ("xstate_bv" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4825 4841])
+                    ("reserved1" variable
+                       (:dereference 1
+                        :type ("__u64" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4843 4862])
+                    ("reserved2" variable
+                       (:dereference 1
+                        :type ("__u64" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4864 4883]))                  
+                :type "struct")
+                nil [4804 4886])
+            ("_ymmh_state" type
+               (:members 
+                  ( ("ymmh_space" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4949 4970]))                  
+                :type "struct")
+                nil [4888 4973])
+            ("_xstate" type
+               (:members 
+                  ( ("fpstate" variable (:type ("_fpstate" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5237 5261])
+                    ("xstate_hdr" variable (:type ("_xsave_hdr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5263 5292])
+                    ("ymmh" variable (:type ("_ymmh_state" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5294 5318]))                  
+                :type "struct")
+                nil [5219 5367]))          
+    :file "sigcontext.h"
+    :pointmax 5404
+    :fsize 5403
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("X86_FXSR_MAGIC" . ((number "0x0000" 2842 . 2848)))
+          ("FP_XSTATE_MAGIC2_SIZE" . ((SIZEOF "sizeof" 193 . 199) (semantic-list "(FP_XSTATE_MAGIC2)" 199 . 217)))
+          ("FP_XSTATE_MAGIC1" . ((symbol "0x46505853U" 114 . 125)))
+          ("FP_XSTATE_MAGIC2" . ((symbol "0x46505845U" 151 . 162)))
+          ("_ASM_X86_SIGCONTEXT_H")
+          )
+
+    )
+   (semanticdb-table "ioctl.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("asm-generic/ioctl.h" include (:system-flag t) nil [1 31]))          
+    :file "ioctl.h"
+    :pointmax 32
+    :fsize 31
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ASM_X86_TYPES_H" variable (:constant-flag t) nil [34 50])
+            ("asm-generic/types.h" include (:system-flag t) nil [52 82]))          
+    :file "types.h"
+    :pointmax 114
+    :fsize 113
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ASM_X86_TYPES_H")
+          )
+
+    )
+   (semanticdb-table "posix_types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("posix_types_32.h" include nil nil [18 47]))          
+    :file "posix_types.h"
+    :pointmax 93
+    :fsize 92
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "posix_types_32.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ASM_X86_POSIX_TYPES_32_H" variable (:constant-flag t) nil [43 68])
+            ("__kernel_ino_t" type
+               (:typedef ("unsigned long")
+                :superclasses "unsigned long"
+                :type "typedef")
+                nil [248 285])
+            ("__kernel_mode_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [286 325])
+            ("__kernel_nlink_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [326 366])
+            ("__kernel_off_t" type
+               (:typedef ("long")
+                :superclasses "long"
+                :type "typedef")
+                nil [367 396])
+            ("__kernel_pid_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [397 425])
+            ("__kernel_ipc_pid_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [426 468])
+            ("__kernel_uid_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [469 507])
+            ("__kernel_gid_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [508 546])
+            ("__kernel_size_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [547 584])
+            ("__kernel_ssize_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [585 615])
+            ("__kernel_ptrdiff_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [616 648])
+            ("__kernel_time_t" type
+               (:typedef ("long")
+                :superclasses "long"
+                :type "typedef")
+                nil [649 679])
+            ("__kernel_suseconds_t" type
+               (:typedef ("long")
+                :superclasses "long"
+                :type "typedef")
+                nil [680 715])
+            ("__kernel_clock_t" type
+               (:typedef ("long")
+                :superclasses "long"
+                :type "typedef")
+                nil [716 747])
+            ("__kernel_timer_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [748 778])
+            ("__kernel_clockid_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [779 811])
+            ("__kernel_daddr_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [812 842])
+            ("__kernel_caddr_t" type
+               (:typedef ("char")
+                :pointer 1
+                :superclasses "char"
+                :type "typedef")
+                nil [843 876])
+            ("__kernel_uid16_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [877 917])
+            ("__kernel_gid16_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [918 958])
+            ("__kernel_uid32_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [959 997])
+            ("__kernel_gid32_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [998 1036])
+            ("__kernel_old_uid_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [1038 1080])
+            ("__kernel_old_gid_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [1081 1123])
+            ("__kernel_old_dev_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [1124 1166])
+            ("__kernel_loff_t" type
+               (:typedef ("long long")
+                :superclasses "long long"
+                :type "typedef")
+                nil [1184 1218])
+            ("__kernel_fsid_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("val" variable
+                             (:dereference 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [1245 1256]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1227 1275]))          
+    :file "posix_types_32.h"
+    :pointmax 1317
+    :fsize 1316
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_ASM_X86_POSIX_TYPES_32_H")
+          )
+
+    )
+   (semanticdb-table "bitsperlong.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__ASM_X86_BITSPERLONG_H" variable (:constant-flag t) nil [41 64])
+            ("__BITS_PER_LONG" variable (:constant-flag t) nil [127 142])
+            ("asm-generic/bitsperlong.h" include (:system-flag t) nil [154 190]))          
+    :file "bitsperlong.h"
+    :pointmax 230
+    :fsize 229
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__ASM_X86_BITSPERLONG_H")
+          ("__BITS_PER_LONG" . ((number "32" 143 . 145)))
+          )
+
+    )
+   (semanticdb-table "socket.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("asm-generic/socket.h" include (:system-flag t) nil [1 32]))          
+    :file "socket.h"
+    :pointmax 33
+    :fsize 32
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sockios.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("asm-generic/sockios.h" include (:system-flag t) nil [1 33]))          
+    :file "sockios.h"
+    :pointmax 34
+    :fsize 33
+    :lastmodtime '(20038 14012)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!usr!include!asm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

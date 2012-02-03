@@ -1,0 +1,19 @@
+;; Object jason/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jason/"
+  :tables (list 
+   (semanticdb-table "hello.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("print" code nil nil [19 39]))          
+    :file "hello.py"
+    :pointmax 40
+    :fsize 39
+    :lastmodtime '(20146 10028)
+    :unmatched-syntax '(($EOI 39 . 39) ($EOI 37 . 37) ($EOI 26 . 26))
+    )
+   )
+  :file "!home!jason!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

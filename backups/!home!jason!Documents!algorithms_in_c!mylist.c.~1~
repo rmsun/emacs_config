@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+#define item int
+typedef struct Node *link;
+struct Node
+{
+     item v;
+     link next;
+};
+ 
+link listInit(int n)
+{
+     int i;
+     link t;
+     t = malloc(n*sizeof(*link));
+     for (i = 0; i < n-1; i++)
+     {
+          t[i] = t[i+1];
+     }
+     t[n-1] = NULL;
+     
+     return t;
+}
+
+void traversalList(link t)
+{
+     while (t != NULL)
+     {
+          printf("%d ", t->v);
+          t = t->next;
+     }
+}
+
+void insert(int p, item n, link t)
+{
+     link r;
+     link m = malloc(sizeof(*link));
+    
+     while (t->v != n)
+     {
+          t = t->next;
+     }
+     /*这时t指向n所在结点*/
+     if (p == 1)   /*在n后insert*/
+     {
+          r = t->next;
+          m = r;
+          t = m;
+     }
+     else
+     {
+          r = (--t)->next; /*--t指向n的上一个结点*/
+          m = r;
+          t = m;
+     }
+}
+
+void deleteItem(item n, link t)
+{
+     lint r;
+
+     while (t->v != n)
+     {
+          t = t->next;
+     }
+     r = t->next;
+     t->next = t->next->next;
+     free(r);
+}
+
+link reverse(link x)
+{
+     link r = NULL, t, y = x;
+     while(y != NULL)
+     {
+          t = y->next;
+          y->next = r;
+          r = y;
+          y = t;
+     }
+     return r;
+}
+
+
+     
+     
+     

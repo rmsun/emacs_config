@@ -1,0 +1,384 @@
+;; Object adt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "adt/"
+  :tables (list 
+   (semanticdb-table "stack.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("item.h" include nil nil [1 18])
+            ("stackInit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [38 42]))                  
+                :type "void")
+                nil [20 43])
+            ("stackEmpty" function
+               (:prototype-flag t
+                :type "int")
+                nil [44 65])
+            ("stackPush" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84 89]))                  
+                :type "void")
+                nil [66 90])
+            ("stackPop" function
+               (:prototype-flag t
+                :type ("Item" type (:type "class") nil nil))
+                nil [91 110])
+            ("freeStack" function
+               (:prototype-flag t
+                :type "void")
+                nil [111 131])
+            ("stackPrint" function
+               (:prototype-flag t
+                :type "void")
+                nil [132 153]))          
+    :file "stack.h"
+    :pointmax 154
+    :fsize 153
+    :lastmodtime '(20134 42256)
+    :unmatched-syntax '((symbol 140 . 150) (VOID 132 . 136) (symbol 140 . 150) (VOID 132 . 136) (symbol 140 . 149) (VOID 132 . 136) (symbol 140 . 149) (VOID 132 . 136) (symbol 140 . 148) (VOID 132 . 136) (symbol 140 . 147) (VOID 132 . 136) (symbol 140 . 146) (VOID 132 . 136) (symbol 140 . 145) (VOID 132 . 136) (symbol 140 . 145) (VOID 132 . 136) (symbol 140 . 144) (VOID 132 . 136) (symbol 140 . 143) (VOID 132 . 136) (symbol 140 . 142) (VOID 132 . 136) (VOID 132 . 136) (VOID 132 . 136) (symbol 132 . 134))
+    )
+   (semanticdb-table "stack_array.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stack.h" include nil nil [21 39])
+            ("item.h" include nil nil [40 57])
+            ("s" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("Item" type (:type "class") nil nil))
+                nil [59 74])
+            ("N" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [75 88])
+            ("stackInit" function
+               (:arguments 
+                  ( ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [105 114]))                  
+                :type "void")
+                nil [90 166])
+            ("stackEmpty" function (:type "int") nil [168 208])
+            ("stackPush" function
+               (:arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [225 235]))                  
+                :type "void")
+                nil [210 259])
+            ("stackPop" function (:type ("Item" type (:type "class") nil nil)) nil [261 300])
+            ("freeStack" function (:type "void") nil [302 336]))          
+    :file "stack_array.c"
+    :pointmax 320
+    :fsize 337
+    :lastmodtime '(20130 47252)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "stack_linked-list.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stack.h" include nil nil [21 39])
+            ("item.h" include nil nil [40 57])
+            ("link" type
+               (:typedef ("stackNode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "stackNode"
+                :type "typedef")
+                nil [59 90])
+            ("stackNode" type
+               (:members 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [115 125])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [131 141]))                  
+                :type "struct")
+                nil [91 144])
+            ("head" variable
+               (:typemodifiers ("static")
+                :type ("link" type (:type "class") nil nil))
+                nil [146 163])
+            ("stackInit" function
+               (:arguments 
+                  ( ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [306 315]))                  
+                :type "void")
+                nil [291 337])
+            ("stackEmpty" function (:type "int") nil [339 385])
+            ("stackPush" function
+               (:arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [402 412]))                  
+                :type "void")
+                nil [387 445])
+            ("stackPop" function (:type ("Item" type (:type "class") nil nil)) nil [447 571]))          
+    :file "stack_linked-list.c"
+    :pointmax 571
+    :fsize 572
+    :lastmodtime '(20130 47758)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "item.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("Item" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [1 18]))          
+    :file "item.h"
+    :pointmax 19
+    :fsize 18
+    :lastmodtime '(20130 43861)
+    :unmatched-syntax '((symbol 13 . 17) (INT 9 . 12) (TYPEDEF 1 . 8) (symbol 13 . 17) (INT 9 . 12) (TYPEDEF 1 . 8) (symbol 13 . 17) (INT 9 . 12) (TYPEDEF 1 . 8) (symbol 13 . 16) (INT 9 . 12) (TYPEDEF 1 . 8) (symbol 13 . 15) (INT 9 . 12) (TYPEDEF 1 . 8) (INT 9 . 12) (TYPEDEF 1 . 8) (INT 9 . 12) (TYPEDEF 1 . 8) (symbol 9 . 11) (TYPEDEF 1 . 8) (TYPEDEF 1 . 8) (symbol 1 . 5) (symbol 1 . 5) (symbol 1 . 4))
+    )
+   (semanticdb-table "postfix.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("item.h" include nil nil [40 57])
+            ("stack.h" include nil nil [58 76])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [87 96])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97 110]))                  
+                :type "int")
+                nil [78 642]))          
+    :file "postfix.c"
+    :pointmax 650
+    :fsize 649
+    :lastmodtime '(20130 48247)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "infix_to_postfix.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string.h" include (:system-flag t) nil [20 39])
+            ("stack.h" include nil nil [40 58])
+            ("item.h" include nil nil [59 76])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [87 96])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [97 110]))                  
+                :type "int")
+                nil [78 497]))          
+    :file "infix_to_postfix.c"
+    :pointmax 498
+    :fsize 497
+    :lastmodtime '(20130 47280)
+    :unmatched-syntax '((symbol 82 . 86) (INT 78 . 81) (symbol 82 . 86) (INT 78 . 81) (symbol 82 . 86) (INT 78 . 81) (symbol 82 . 84) (INT 78 . 81) (INT 78 . 81) (symbol 78 . 80) (string 68 . 70) (symbol 60 . 67) (punctuation 59 . 60) (symbol 60 . 67) (punctuation 59 . 60) (symbol 60 . 67) (punctuation 59 . 60) (symbol 60 . 66) (punctuation 59 . 60) (symbol 60 . 65) (punctuation 59 . 60) (symbol 60 . 63) (punctuation 59 . 60) (symbol 60 . 62) (punctuation 59 . 60) (string 49 . 51) (symbol 41 . 48) (punctuation 40 . 41) (symbol 41 . 48) (punctuation 40 . 41) (symbol 41 . 48) (punctuation 40 . 41) (symbol 41 . 47) (punctuation 40 . 41) (symbol 41 . 46) (punctuation 40 . 41) (symbol 41 . 45) (punctuation 40 . 41) (symbol 41 . 43) (punctuation 40 . 41) (symbol 21 . 28) (punctuation 20 . 21) (symbol 21 . 26) (punctuation 20 . 21) (symbol 21 . 25) (punctuation 20 . 21) (symbol 21 . 23) (punctuation 20 . 21) (symbol 2 . 9) (punctuation 1 . 2) (symbol 2 . 7) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2))
+    )
+   (semanticdb-table "fifo_queue.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("item.h" include nil nil [1 18])
+            ("queueInit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [38 42]))                  
+                :type "void")
+                nil [20 43])
+            ("queueEmpty" function
+               (:prototype-flag t
+                :type "int")
+                nil [44 65])
+            ("queuePut" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83 88]))                  
+                :type "void")
+                nil [66 89])
+            ("quetuGet" function
+               (:prototype-flag t
+                :type ("Item" type (:type "class") nil nil))
+                nil [90 109]))          
+    :file "fifo_queue.h"
+    :pointmax 100
+    :fsize 109
+    :lastmodtime '(20133 24854)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fifo_linked-list.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 23])
+            ("item.h" include nil nil [24 44])
+            ("fifo_queue.h" include nil nil [45 71])
+            ("link" type
+               (:typedef ("queueNode" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "queueNode"
+                :type "typedef")
+                nil [73 104])
+            ("queueNode" type
+               (:members 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [129 139])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [145 155]))                  
+                :type "struct")
+                nil [105 158])
+            ("tail" variable (:type ("link" type (:type "class") nil nil)) nil [166 182])
+            ("head" variable (:type ("link" type (:type "class") nil nil)) nil [166 182])
+            ("queueInit" function
+               (:arguments 
+                  ( ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [325 334]))                  
+                :type "void")
+                nil [310 356])
+            ("queueEmpty" function (:type "int") nil [358 404])
+            ("queuePut" function
+               (:arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 430]))                  
+                :type "void")
+                nil [406 597])
+            ("queueGet" function (:type ("Item" type (:type "class") nil nil)) nil [599 723]))          
+    :file "fifo_linked-list.c"
+    :pointmax 724
+    :fsize 724
+    :lastmodtime '(20133 28473)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fifo_arry.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 23])
+            ("item.h" include nil nil [24 44])
+            ("fifo_queue.h" include nil nil [45 71])
+            ("q" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("Item" type (:type "class") nil nil))
+                nil [73 88])
+            ("tail" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [89 114])
+            ("head" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [89 114])
+            ("N" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [89 114])
+            ("queueInit" function
+               (:arguments 
+                  ( ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [131 140]))                  
+                :type "void")
+                nil [116 231])
+            ("queueEmpty" function (:type "int") nil [233 283])
+            ("queuePut" function
+               (:arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [299 309]))                  
+                :type "void")
+                nil [285 358])
+            ("queueGet" function (:type ("Item" type (:type "class") nil nil)) nil [360 424]))          
+    :file "fifo_arry.c"
+    :pointmax 427
+    :fsize 426
+    :lastmodtime '(20133 29661)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fifo_test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 22])
+            ("fifo_queue.h" include nil nil [23 49])
+            ("N" variable (:constant-flag t) nil [59 60])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [74 83])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [84 97]))                  
+                :type "int")
+                nil [65 437]))          
+    :file "fifo_test.c"
+    :pointmax 422
+    :fsize 438
+    :lastmodtime '(20133 29756)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("N" . ((number "10" 61 . 63)))
+          )
+
+    )
+   (semanticdb-table "stack_no_duplicates.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("item.h" include nil nil [40 57])
+            ("stack.h" include nil nil [58 76])
+            ("t" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "int")
+                nil [78 96])
+            ("s" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "int")
+                nil [78 96])
+            ("N" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [97 110])
+            ("stackInit" function
+               (:arguments 
+                  ( ("maxN" variable (:type "int") (reparse-symbol arg-sub-list) [127 136]))                  
+                :type "void")
+                nil [112 286])
+            ("stackEmpty" function (:type "int") nil [288 324])
+            ("stackPush" function
+               (:arguments 
+                  ( ("item" variable (:type ("Item" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [341 351]))                  
+                :type "void")
+                nil [326 434])
+            ("stackPop" function (:type ("Item" type (:type "class") nil nil)) nil [436 501])
+            ("stackPrint" function (:type "void") nil [503 685]))          
+    :file "stack_no_duplicates.c"
+    :pointmax 678
+    :fsize 686
+    :lastmodtime '(20134 44245)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "stack_no_duplicates_test.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stack.h" include nil nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("stdio.h" include (:system-flag t) nil [40 58])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [69 78])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [79 92]))                  
+                :type "int")
+                nil [60 1506]))          
+    :file "stack_no_duplicates_test.c"
+    :pointmax 1336
+    :fsize 1513
+    :lastmodtime '(20134 45580)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!algorithms_in_c!adt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

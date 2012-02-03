@@ -1,0 +1,19 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("rrdtool-graph.sh" "spawn-php.sh")) nil [1 49]))          
+    :file "Makefile.am"
+    :pointmax 49
+    :fsize 48
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

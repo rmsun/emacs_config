@@ -1,0 +1,372 @@
+;; Object BitTorrent/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "BitTorrent/"
+  :tables (list 
+   (semanticdb-table "track.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [584 594])
+            ("os" include nil nil [647 656])
+            ("signal" include nil nil [782 795])
+            ("re" include nil nil [842 851])
+            ("threading" include nil nil [892 919])
+            ("urlparse" include nil nil [920 949])
+            ("traceback" include nil nil [950 981])
+            ("time" include nil nil [982 1032])
+            ("random" include nil nil [1033 1059])
+            ("types" include nil nil [1060 1127])
+            ("binascii" include nil nil [1128 1156])
+            ("cStringIO" include nil nil [1157 1187])
+            ("BitTorrent.obsoletepythonsupport" include nil nil [1189 1235])
+            ("BitTorrent.parseargs" include nil nil [1237 1298])
+            ("BitTorrent.RawServer_magic" include nil nil [1299 1347])
+            ("BitTorrent.HTTPHandler" include nil nil [1348 1412])
+            ("BitTorrent.parsedir" include nil nil [1413 1453])
+            ("BitTorrent.NatCheck" include nil nil [1454 1494])
+            ("BitTorrent.bencode" include nil nil [1495 1553])
+            ("BitTorrent.zurllib" include nil nil [1554 1599])
+            ("BitTorrent" include nil nil [1600 1630])
+            ("defaults" variable nil nil [1633 5194])
+            ("statefiletemplate" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [5219 5220]))              ) nil [5197 7932])
+            ("alas" variable nil nil [7934 8013])
+            ("isotime" function (:arguments 
+              ( ("secs" variable nil (reparse-symbol function_parameters) [8027 8031]))              ) nil [8015 8140])
+            ("http_via_filter" variable nil nil [8141 8189])
+            ("_get_forwarded_ip" function (:arguments 
+              ( ("headers" variable nil (reparse-symbol function_parameters) [8213 8220]))              ) nil [8191 8820])
+            ("get_forwarded_ip" function (:arguments 
+              ( ("headers" variable nil (reparse-symbol function_parameters) [8842 8849]))              ) nil [8821 8980])
+            ("compact_peer_info" function (:arguments 
+              ( ("ip" variable nil (reparse-symbol function_parameters) [9003 9005])
+                ("port" variable nil (reparse-symbol function_parameters) [9007 9011]))              ) nil [8981 9270])
+            ("is_valid_ipv4" function (:arguments 
+              ( ("ip" variable nil (reparse-symbol function_parameters) [9289 9291]))              ) nil [9271 9463])
+            ("is_local_ip" function (:arguments 
+              ( ("ip" variable nil (reparse-symbol function_parameters) [9480 9482]))              ) nil [9464 9749])
+            ("Tracker" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9792 9796])
+                        ("config" variable nil (reparse-symbol function_parameters) [9798 9804])
+                        ("rawserver" variable nil (reparse-symbol function_parameters) [9806 9815]))                      ) (reparse-symbol indented_block_body) [9779 14304])
+                    ("allow_local_override" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14334 14338])
+                        ("ip" variable nil (reparse-symbol function_parameters) [14340 14342])
+                        ("given_ip" variable nil (reparse-symbol function_parameters) [14344 14352]))                      ) (reparse-symbol indented_block_body) [14309 14465])
+                    ("get_infopage" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [14487 14491]))                      ) (reparse-symbol indented_block_body) [14470 20108])
+                    ("scrapedata" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20128 20132])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [20134 20142])
+                        ("return_name" variable nil (reparse-symbol function_parameters) [20144 20155]))                      ) (reparse-symbol indented_block_body) [20113 20515])
+                    ("get_scrape" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [20535 20539])
+                        ("paramslist" variable nil (reparse-symbol function_parameters) [20541 20551]))                      ) (reparse-symbol indented_block_body) [20520 21810])
+                    ("get_file" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [21828 21832])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [21834 21842]))                      ) (reparse-symbol indented_block_body) [21815 22472])
+                    ("check_allowed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [22495 22499])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [22501 22509])
+                        ("paramslist" variable nil (reparse-symbol function_parameters) [22511 22521]))                      ) (reparse-symbol indented_block_body) [22477 23190])
+                    ("add_data" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [23208 23212])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [23214 23222])
+                        ("event" variable nil (reparse-symbol function_parameters) [23224 23229])
+                        ("ip" variable nil (reparse-symbol function_parameters) [23231 23233])
+                        ("paramslist" variable nil (reparse-symbol function_parameters) [23235 23245]))                      ) (reparse-symbol indented_block_body) [23195 27333])
+                    ("peerlist" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27351 27355])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [27357 27365])
+                        ("stopped" variable nil (reparse-symbol function_parameters) [27367 27374])
+                        ("is_seed" variable nil (reparse-symbol function_parameters) [27376 27383])
+                        ("return_type" variable nil (reparse-symbol function_parameters) [27385 27396])
+                        ("rsize" variable nil (reparse-symbol function_parameters) [27398 27403]))                      ) (reparse-symbol indented_block_body) [27338 29911])
+                    ("get" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [29924 29928])
+                        ("connection" variable nil (reparse-symbol function_parameters) [29930 29940])
+                        ("path" variable nil (reparse-symbol function_parameters) [29942 29946])
+                        ("headers" variable nil (reparse-symbol function_parameters) [29948 29955]))                      ) (reparse-symbol indented_block_body) [29916 32378])
+                    ("natcheckOK" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32398 32402])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [32404 32412])
+                        ("peerid" variable nil (reparse-symbol function_parameters) [32414 32420])
+                        ("ip" variable nil (reparse-symbol function_parameters) [32422 32424])
+                        ("port" variable nil (reparse-symbol function_parameters) [32426 32430])
+                        ("not_seed" variable nil (reparse-symbol function_parameters) [32432 32440]))                      ) (reparse-symbol indented_block_body) [32383 32818])
+                    ("natchecklog" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [32839 32843])
+                        ("peerid" variable nil (reparse-symbol function_parameters) [32845 32851])
+                        ("ip" variable nil (reparse-symbol function_parameters) [32853 32855])
+                        ("port" variable nil (reparse-symbol function_parameters) [32857 32861])
+                        ("result" variable nil (reparse-symbol function_parameters) [32863 32869]))                      ) (reparse-symbol indented_block_body) [32823 33143])
+                    ("connectback_result" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [33171 33175])
+                        ("result" variable nil (reparse-symbol function_parameters) [33177 33183])
+                        ("downloadid" variable nil (reparse-symbol function_parameters) [33185 33195])
+                        ("peerid" variable nil (reparse-symbol function_parameters) [33197 33203])
+                        ("ip" variable nil (reparse-symbol function_parameters) [33205 33207])
+                        ("port" variable nil (reparse-symbol function_parameters) [33209 33213]))                      ) (reparse-symbol indented_block_body) [33148 34104])
+                    ("save_dfile" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34124 34128]))                      ) (reparse-symbol indented_block_body) [34109 34296])
+                    ("parse_allowed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [34319 34323]))                      ) (reparse-symbol indented_block_body) [34301 35157])
+                    ("delete_peer" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35178 35182])
+                        ("infohash" variable nil (reparse-symbol function_parameters) [35184 35192])
+                        ("peerid" variable nil (reparse-symbol function_parameters) [35194 35200]))                      ) (reparse-symbol indented_block_body) [35162 35569])
+                    ("expire_downloaders" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [35597 35601]))                      ) (reparse-symbol indented_block_body) [35574 36265]))                  
+                :type "class")
+                nil [9751 36265])
+            ("track" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [36276 36280]))              ) nil [36266 37100])
+            ("size_format" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [37117 37118]))              ) nil [37101 37468]))          
+    :file "track.py"
+    :pointmax 37453
+    :fsize 37643
+    :lastmodtime '(20151 15467)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "parseargs.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("types" include nil nil [586 605])
+            ("cStringIO" include nil nil [606 636])
+            ("BitTorrent.obsoletepythonsupport" include nil nil [638 684])
+            ("BitTorrent.defaultargs" include nil nil [686 735])
+            ("BitTorrent" include nil nil [736 768])
+            ("BitTorrent.bencode" include nil nil [769 807])
+            ("BitTorrent.platform" include nil nil [808 853])
+            ("BitTorrent.RawServer_magic" include nil nil [854 909])
+            ("makeHelp" function (:arguments 
+              ( ("uiname" variable nil (reparse-symbol function_parameters) [924 930])
+                ("defaults" variable nil (reparse-symbol function_parameters) [932 940]))              ) nil [911 1582])
+            ("printHelp" function (:arguments 
+              ( ("uiname" variable nil (reparse-symbol function_parameters) [1597 1603])
+                ("defaults" variable nil (reparse-symbol function_parameters) [1605 1613]))              ) nil [1583 1831])
+            ("formatDefinitions" function (:arguments 
+              ( ("options" variable nil (reparse-symbol function_parameters) [1854 1861])
+                ("COLS" variable nil (reparse-symbol function_parameters) [1863 1867]))              ) nil [1832 2807])
+            ("usage" function (:arguments 
+              ( ("str" variable nil (reparse-symbol function_parameters) [2818 2821]))              ) nil [2808 2849])
+            ("format_key" function (:arguments 
+              ( ("key" variable nil (reparse-symbol function_parameters) [2865 2868]))              ) nil [2850 2954])
+            ("parseargs" function (:arguments 
+              ( ("argv" variable nil (reparse-symbol function_parameters) [2969 2973])
+                ("options" variable nil (reparse-symbol function_parameters) [2975 2982])
+                ("minargs" variable nil (reparse-symbol function_parameters) [2984 2991])
+                ("maxargs" variable nil (reparse-symbol function_parameters) [2998 3005])
+                ("presets" variable nil (reparse-symbol function_parameters) [3012 3019]))              ) nil [2955 5471])
+            ("parse_options" function (:arguments 
+              ( ("defaults" variable nil (reparse-symbol function_parameters) [5490 5498])
+                ("newvalues" variable nil (reparse-symbol function_parameters) [5500 5509]))              ) nil [5472 6529]))          
+    :file "parseargs.py"
+    :pointmax 6530
+    :fsize 6529
+    :lastmodtime '(17375 50595)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "RawServer.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [580 589])
+            ("sys" include nil nil [590 600])
+            ("socket" include nil nil [601 614])
+            ("signal" include nil nil [615 628])
+            ("struct" include nil nil [629 642])
+            ("thread" include nil nil [643 656])
+            ("bisect" include nil nil [657 682])
+            ("cStringIO" include nil nil [683 713])
+            ("traceback" include nil nil [714 745])
+            ("errno" include nil nil [746 791])
+            ("BitTorrent.platform" include nil nil [793 831])
+            ("BitTorrent" include nil nil [832 881])
+            ("BitTorrent.defer" include nil nil [882 919])
+            ("try" code nil nil [921 1138])
+            ("NOLINGER" variable nil nil [1139 1173])
+            ("Handler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("connection_started" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1324 1328])
+                        ("s" variable nil (reparse-symbol function_parameters) [1330 1331]))                      ) (reparse-symbol indented_block_body) [1301 1366])
+                    ("connection_made" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1390 1394])
+                        ("s" variable nil (reparse-symbol function_parameters) [1396 1397]))                      ) (reparse-symbol indented_block_body) [1370 1413])
+                    ("connection_lost" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1438 1442])
+                        ("s" variable nil (reparse-symbol function_parameters) [1444 1445]))                      ) (reparse-symbol indented_block_body) [1418 1461])
+                    ("connection_failed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1570 1574])
+                        ("addr" variable nil (reparse-symbol function_parameters) [1576 1580])
+                        ("exception" variable nil (reparse-symbol function_parameters) [1582 1591]))                      ) (reparse-symbol indented_block_body) [1548 1607])
+                    ("connection_flushed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1639 1643])
+                        ("s" variable nil (reparse-symbol function_parameters) [1645 1646]))                      ) (reparse-symbol indented_block_body) [1616 1662])
+                    ("data_came_in" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1683 1687])
+                        ("addr" variable nil (reparse-symbol function_parameters) [1689 1693])
+                        ("datagram" variable nil (reparse-symbol function_parameters) [1695 1703]))                      ) (reparse-symbol indented_block_body) [1666 1719]))                  
+                :type "class")
+                nil [1176 1719])
+            ("SingleSocket" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1771 1775])
+                        ("rawserver" variable nil (reparse-symbol function_parameters) [1777 1786])
+                        ("sock" variable nil (reparse-symbol function_parameters) [1788 1792])
+                        ("handler" variable nil (reparse-symbol function_parameters) [1794 1801])
+                        ("context" variable nil (reparse-symbol function_parameters) [1803 1810])
+                        ("addr" variable nil (reparse-symbol function_parameters) [1812 1816]))                      ) (reparse-symbol indented_block_body) [1758 3270])
+                    ("close" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3318 3322]))                      ) (reparse-symbol indented_block_body) [3308 3680])
+                    ("shutdown" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3698 3702])
+                        ("val" variable nil (reparse-symbol function_parameters) [3704 3707]))                      ) (reparse-symbol indented_block_body) [3685 3744])
+                    ("is_flushed" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3764 3768]))                      ) (reparse-symbol indented_block_body) [3749 3808])
+                    ("write" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3823 3827])
+                        ("s" variable nil (reparse-symbol function_parameters) [3829 3830]))                      ) (reparse-symbol indented_block_body) [3813 3965])
+                    ("try_write" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3984 3988]))                      ) (reparse-symbol indented_block_body) [3970 4745]))                  
+                :type "class")
+                nil [1725 4745])
+            ("default_error_handler" function (:arguments 
+              ( ("level" variable nil (reparse-symbol function_parameters) [4773 4778])
+                ("message" variable nil (reparse-symbol function_parameters) [4780 4787]))              ) nil [4747 4808])
+            ("RawServer" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [4852 4856])
+                        ("doneflag" variable nil (reparse-symbol function_parameters) [4858 4866])
+                        ("config" variable nil (reparse-symbol function_parameters) [4868 4874])
+                        ("noisy" variable nil (reparse-symbol function_parameters) [4876 4881])
+                        ("errorfunc" variable nil (reparse-symbol function_parameters) [4905 4914])
+                        ("tos" variable nil (reparse-symbol function_parameters) [4938 4941]))                      ) (reparse-symbol indented_block_body) [4839 5971])
+                    ("_wakeup" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5988 5992]))                      ) (reparse-symbol indented_block_body) [5976 6034])
+                    ("add_context" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6055 6059])
+                        ("context" variable nil (reparse-symbol function_parameters) [6061 6068]))                      ) (reparse-symbol indented_block_body) [6039 6114])
+                    ("remove_context" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6138 6142])
+                        ("context" variable nil (reparse-symbol function_parameters) [6144 6151]))                      ) (reparse-symbol indented_block_body) [6119 6258])
+                    ("add_task" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6276 6280])
+                        ("func" variable nil (reparse-symbol function_parameters) [6282 6286])
+                        ("delay" variable nil (reparse-symbol function_parameters) [6288 6293])
+                        ("args" variable nil (reparse-symbol function_parameters) [6295 6299])
+                        ("context" variable nil (reparse-symbol function_parameters) [6304 6311]))                      ) (reparse-symbol indented_block_body) [6263 6538])
+                    ("external_add_task" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6565 6569])
+                        ("func" variable nil (reparse-symbol function_parameters) [6571 6575])
+                        ("delay" variable nil (reparse-symbol function_parameters) [6577 6582])
+                        ("args" variable nil (reparse-symbol function_parameters) [6584 6588])
+                        ("context" variable nil (reparse-symbol function_parameters) [6593 6600]))                      ) (reparse-symbol indented_block_body) [6543 6896])
+                    ("scan_for_timeouts" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [6923 6927]))                      ) (reparse-symbol indented_block_body) [6901 7370])
+                    ("create_unixserversocket" function (:arguments 
+                      ( ("filename" variable nil (reparse-symbol function_parameters) [7403 7411]))                      ) (reparse-symbol indented_block_body) [7375 7588])
+                    ("create_unixserversocket" variable nil (reparse-symbol indented_block_body) [7592 7655])
+                    ("create_serversocket" function (:arguments 
+                      ( ("port" variable nil (reparse-symbol function_parameters) [7685 7689])
+                        ("bind" variable nil (reparse-symbol function_parameters) [7691 7695])
+                        ("reuse" variable nil (reparse-symbol function_parameters) [7700 7705])
+                        ("tos" variable nil (reparse-symbol function_parameters) [7713 7716]))                      ) (reparse-symbol indented_block_body) [7661 8162])
+                    ("create_serversocket" variable nil (reparse-symbol indented_block_body) [8166 8221])
+                    ("create_udpsocket" function (:arguments 
+                      ( ("port" variable nil (reparse-symbol function_parameters) [8248 8252])
+                        ("bind" variable nil (reparse-symbol function_parameters) [8254 8258])
+                        ("reuse" variable nil (reparse-symbol function_parameters) [8263 8268])
+                        ("tos" variable nil (reparse-symbol function_parameters) [8276 8279]))                      ) (reparse-symbol indented_block_body) [8227 8699])
+                    ("create_udpsocket" variable nil (reparse-symbol indented_block_body) [8703 8752])
+                    ("start_listening" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [8778 8782])
+                        ("serversocket" variable nil (reparse-symbol function_parameters) [8784 8796])
+                        ("handler" variable nil (reparse-symbol function_parameters) [8798 8805])
+                        ("context" variable nil (reparse-symbol function_parameters) [8807 8814]))                      ) (reparse-symbol indented_block_body) [8758 9034])
+                    ("start_listening_udp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9063 9067])
+                        ("serversocket" variable nil (reparse-symbol function_parameters) [9069 9081])
+                        ("handler" variable nil (reparse-symbol function_parameters) [9083 9090])
+                        ("context" variable nil (reparse-symbol function_parameters) [9092 9099]))                      ) (reparse-symbol indented_block_body) [9039 9388])
+                    ("stop_listening" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9412 9416])
+                        ("serversocket" variable nil (reparse-symbol function_parameters) [9418 9430]))                      ) (reparse-symbol indented_block_body) [9393 9589])
+                    ("stop_listening_udp" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9617 9621])
+                        ("serversocket" variable nil (reparse-symbol function_parameters) [9623 9635]))                      ) (reparse-symbol indented_block_body) [9594 9907])
+                    ("start_connection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9933 9937])
+                        ("dns" variable nil (reparse-symbol function_parameters) [9939 9942])
+                        ("handler" variable nil (reparse-symbol function_parameters) [9944 9951])
+                        ("context" variable nil (reparse-symbol function_parameters) [9958 9965])
+                        ("do_bind" variable nil (reparse-symbol function_parameters) [9972 9979]))                      ) (reparse-symbol indented_block_body) [9912 10725])
+                    ("_add_pending_connection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10758 10762])
+                        ("addr" variable nil (reparse-symbol function_parameters) [10764 10768]))                      ) (reparse-symbol indented_block_body) [10730 10784])
+                    ("_remove_pending_connection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10820 10824])
+                        ("addr" variable nil (reparse-symbol function_parameters) [10826 10830]))                      ) (reparse-symbol indented_block_body) [10789 10846])
+                    ("async_start_connection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10878 10882])
+                        ("dns" variable nil (reparse-symbol function_parameters) [10884 10887])
+                        ("handler" variable nil (reparse-symbol function_parameters) [10889 10896])
+                        ("context" variable nil (reparse-symbol function_parameters) [10903 10910])
+                        ("do_bind" variable nil (reparse-symbol function_parameters) [10917 10924]))                      ) (reparse-symbol indented_block_body) [10851 11051])
+                    ("_start_connection" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11082 11086]))                      ) (reparse-symbol indented_block_body) [11060 11364])
+                    ("wrap_socket" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11393 11397])
+                        ("sock" variable nil (reparse-symbol function_parameters) [11399 11403])
+                        ("handler" variable nil (reparse-symbol function_parameters) [11405 11412])
+                        ("context" variable nil (reparse-symbol function_parameters) [11414 11421])
+                        ("ip" variable nil (reparse-symbol function_parameters) [11428 11430])
+                        ("port" variable nil (reparse-symbol function_parameters) [11437 11441]))                      ) (reparse-symbol indented_block_body) [11377 11649])
+                    ("install_sigint_handler" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11723 11727]))                      ) (reparse-symbol indented_block_body) [11696 11782])
+                    ("_handler" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11800 11804])
+                        ("signum" variable nil (reparse-symbol function_parameters) [11806 11812])
+                        ("frame" variable nil (reparse-symbol function_parameters) [11814 11819]))                      ) (reparse-symbol indented_block_body) [11787 12068])
+                    ("_handle_events" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [12092 12096])
+                        ("events" variable nil (reparse-symbol function_parameters) [12098 12104]))                      ) (reparse-symbol indented_block_body) [12073 15209])
+                    ("_pop_externally_added" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15240 15244]))                      ) (reparse-symbol indented_block_body) [15214 15377])
+                    ("listen_forever" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15401 15405]))                      ) (reparse-symbol indented_block_body) [15382 15554])
+                    ("listen_once" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [15587 15591])
+                        ("period" variable nil (reparse-symbol function_parameters) [15593 15599]))                      ) (reparse-symbol indented_block_body) [15571 17511])
+                    ("_make_wrapped_call" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [17539 17543])
+                        ("function" variable nil (reparse-symbol function_parameters) [17545 17553])
+                        ("args" variable nil (reparse-symbol function_parameters) [17555 17559])
+                        ("socket" variable nil (reparse-symbol function_parameters) [17561 17567])
+                        ("context" variable nil (reparse-symbol function_parameters) [17574 17581]))                      ) (reparse-symbol indented_block_body) [17516 18376])
+                    ("_close_dead" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18397 18401]))                      ) (reparse-symbol indented_block_body) [18381 18635])
+                    ("_close_socket" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [18658 18662])
+                        ("s" variable nil (reparse-symbol function_parameters) [18664 18665]))                      ) (reparse-symbol indented_block_body) [18640 19037]))                  
+                :type "class")
+                nil [4809 19037]))          
+    :file "RawServer.py"
+    :pointmax 18989
+    :fsize 19010
+    :lastmodtime '(20151 24916)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!p2p source code!BitTorrent-4.4.0!BitTorrent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

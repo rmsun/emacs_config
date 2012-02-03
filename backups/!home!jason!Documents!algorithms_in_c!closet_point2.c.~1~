@@ -1,0 +1,33 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct 
+{
+     float x;
+     float y;
+}point;
+typedef struct node *link;
+struct node
+{
+     point p;
+     link next;
+};
+link **grid;
+int G;
+float d;
+int cnt = 0;
+
+float distance(point a, point b)
+{
+     float dx = a.x - b.x;
+     float dy = a.y - b.y;
+     return sqrt(dx*dx + dy*dy);
+}
+
+void gridInsert(float x, float y)
+{
+     int i, j;
+     link s;
+     
+     

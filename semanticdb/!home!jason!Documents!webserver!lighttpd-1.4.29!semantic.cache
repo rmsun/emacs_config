@@ -1,0 +1,22 @@
+;; Object lighttpd-1.4.29/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lighttpd-1.4.29/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("SUBDIRS" variable (:default-value ("src" "doc" "tests")) nil [1 23])
+            ("EXTRA_DIST" variable (:default-value ("autogen.sh" "SConstruct")) nil [24 57])
+            ("ACLOCAL_AMFLAGS" variable (:default-value ("-I" "m4")) nil [58 82])
+            ("distcleancheck_listfiles" variable (:default-value ("find" "-type" "f" "-exec" "sh" "-c" "'test -f $(srcdir)/{} || echo {}'" "';'")) nil [83 173]))          
+    :file "Makefile.am"
+    :pointmax 173
+    :fsize 172
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

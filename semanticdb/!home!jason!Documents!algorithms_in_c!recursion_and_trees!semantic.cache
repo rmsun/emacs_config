@@ -1,0 +1,102 @@
+;; Object recursion_and_trees/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "recursion_and_trees/"
+  :tables (list 
+   (semanticdb-table "greatest_common_divisor.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [210 229])
+            ("cstdio" include (:system-flag t) nil [230 247])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [249 269])
+            ("gcd" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [279 285])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [286 292]))                  
+                :type "int")
+                nil [271 357])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [373 382])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [383 396]))                  
+                :type "int")
+                nil [364 633]))          
+    :file "greatest_common_divisor.cpp"
+    :pointmax 634
+    :fsize 633
+    :lastmodtime '(20136 3506)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "evaluate_prefix.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [188 206])
+            ("a" variable
+               (:dereference 1
+                :type "char")
+                nil [208 219])
+            ("i" variable (:type "int") nil [220 230])
+            ("eval" function (:type "int") nil [232 564])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [575 584])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [585 598]))                  
+                :type "int")
+                nil [566 781]))          
+    :file "evaluate_prefix.c"
+    :pointmax 776
+    :fsize 781
+    :lastmodtime '(20136 6070)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "maximum.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("Item" variable (:constant-flag t) nil [48 52])
+            ("max" function
+               (:arguments 
+                  ( ("a" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [67 76])
+                    ("l" variable (:type "int") (reparse-symbol arg-sub-list) [77 83])
+                    ("r" variable (:type "int") (reparse-symbol arg-sub-list) [84 90]))                  
+                :type "int")
+                nil [58 286])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [297 306])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [307 320]))                  
+                :type "int")
+                nil [288 407]))          
+    :file "maximum.c"
+    :pointmax 423
+    :fsize 408
+    :lastmodtime '(20142 5159)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("Item" . ((INT "int" 53 . 56)))
+          )
+
+    )
+   )
+  :file "!home!jason!Documents!algorithms_in_c!recursion_and_trees!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

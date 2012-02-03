@@ -1,0 +1,19 @@
+;; Object vhosts.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vhosts.d/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("vhosts.template")) nil [1 28]))          
+    :file "Makefile.am"
+    :pointmax 28
+    :fsize 27
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!config!vhosts.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

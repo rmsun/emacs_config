@@ -1,0 +1,131 @@
+;; Object arpa/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "arpa/"
+  :tables (list 
+   (semanticdb-table "inet.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_ARPA_INET_H" variable (:constant-flag t) nil [905 917])
+            ("features.h" include (:system-flag t) nil [921 942])
+            ("netinet/in.h" include (:system-flag t) nil [943 966])
+            ("socklen_t" type
+               (:typedef ("__socklen_t" type (:type "class") nil nil)
+                :superclasses "__socklen_t"
+                :type "typedef")
+                nil [1082 1112])
+            ("__socklen_t_defined" variable (:constant-flag t) nil [1122 1141])
+            ("inet_addr" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__cp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1310 1329]))                  
+                :type ("in_addr_t" type (:type "class") nil nil))
+                nil [1282 1338])
+            ("inet_lnaof" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__in" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1442 1462]))                  
+                :type ("in_addr_t" type (:type "class") nil nil))
+                nil [1413 1471])
+            ("inet_makeaddr" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__net" variable (:type ("in_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1634 1650])
+                    ("__host" variable (:type ("in_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1651 1668]))                  
+                :type ("in_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1597 1682])
+            ("inet_netof" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__in" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1775 1795]))                  
+                :type ("in_addr_t" type (:type "class") nil nil))
+                nil [1746 1804])
+            ("inet_network" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__cp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1958 1977]))                  
+                :type ("in_addr_t" type (:type "class") nil nil))
+                nil [1927 1986])
+            ("inet_ntoa" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__in" variable (:type ("in_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [2152 2172]))                  
+                :type "char")
+                nil [2128 2181])
+            ("inet_pton" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__af" variable (:type "int") (reparse-symbol arg-sub-list) [2393 2402])
+                    ("__cp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2403 2433])
+                    ("__buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2442 2465]))                  
+                :type "int")
+                nil [2371 2474])
+            ("inet_ntop" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :constant-flag t
+                :arguments 
+                  ( ("__af" variable (:type "int") (reparse-symbol arg-sub-list) [2700 2709])
+                    ("__cp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2710 2740])
+                    ("__buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2745 2768])
+                    ("__len" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2769 2785]))                  
+                :type "char")
+                nil [2668 2799]))          
+    :file "inet.h"
+    :pointmax 4378
+    :fsize 4377
+    :lastmodtime '(20038 35596)
+    :unmatched-syntax '((symbol 4340 . 4351) (symbol 1150 . 1163))
+    :lexical-table 
+        '(("__socklen_t_defined")
+          ("_ARPA_INET_H" . ((number "1" 918 . 919)))
+          )
+
+    )
+   )
+  :file "!usr!include!arpa!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

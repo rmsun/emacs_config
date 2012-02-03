@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+CThreadManage::CThreadManage()
+{
+    m_NumOfThread = 10;
+    m_Pool = new CThreadPool(m_NumOfThread);
+}
+
+CThreadManage::CThreadManage(int num)
+{
+    m_NumOfThread = num;
+    m_Pool = new CThreadPool(m_NumOfThread);
+}

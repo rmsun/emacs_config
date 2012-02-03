@@ -1,0 +1,200 @@
+;; Object linux/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linux/"
+  :tables (list 
+   (semanticdb-table "ioctl.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINUX_IOCTL_H" variable (:constant-flag t) nil [32 46])
+            ("asm/ioctl.h" include (:system-flag t) nil [48 70]))          
+    :file "ioctl.h"
+    :pointmax 101
+    :fsize 100
+    :lastmodtime '(20038 14010)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LINUX_IOCTL_H")
+          )
+
+    )
+   (semanticdb-table "types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINUX_TYPES_H" variable (:constant-flag t) nil [32 46])
+            ("asm/types.h" include (:system-flag t) nil [48 70])
+            ("linux/posix_types.h" include (:system-flag t) nil [94 124])
+            ("__bitwise__" variable (:constant-flag t) nil [337 348])
+            ("__bitwise" variable (:constant-flag t) nil [424 433])
+            ("__le16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :superclasses "__u16"
+                :type "typedef")
+                nil [442 473])
+            ("__be16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :superclasses "__u16"
+                :type "typedef")
+                nil [474 505])
+            ("__le32" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :superclasses "__u32"
+                :type "typedef")
+                nil [506 537])
+            ("__be32" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :superclasses "__u32"
+                :type "typedef")
+                nil [538 569])
+            ("__le64" type
+               (:typedef ("__u64" type (:type "class") nil nil)
+                :superclasses "__u64"
+                :type "typedef")
+                nil [570 601])
+            ("__be64" type
+               (:typedef ("__u64" type (:type "class") nil nil)
+                :superclasses "__u64"
+                :type "typedef")
+                nil [602 633])
+            ("__sum16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :superclasses "__u16"
+                :type "typedef")
+                nil [635 667])
+            ("__wsum" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :superclasses "__u32"
+                :type "typedef")
+                nil [668 699])
+            ("__aligned_u64" variable (:constant-flag t) nil [1210 1223])
+            ("__aligned_be64" variable (:constant-flag t) nil [1266 1280])
+            ("__aligned_le64" variable (:constant-flag t) nil [1324 1338]))          
+    :file "types.h"
+    :pointmax 1430
+    :fsize 1429
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LINUX_TYPES_H")
+          ("__aligned_be64" . 
+              ((symbol "__be64" 1281 . 1287) (symbol "__attribute__" 1288 . 1301) (semantic-list "((aligned(8)))" 1301 . 1315)))
+          ("__aligned_u64" . 
+              ((symbol "__u64" 1224 . 1229) (symbol "__attribute__" 1230 . 1243) (semantic-list "((aligned(8)))" 1243 . 1257)))
+          ("__bitwise")
+          ("__bitwise__")
+          ("__aligned_le64" . 
+              ((symbol "__le64" 1339 . 1345) (symbol "__attribute__" 1346 . 1359) (semantic-list "((aligned(8)))" 1359 . 1373)))
+          )
+
+    )
+   (semanticdb-table "posix_types.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINUX_POSIX_TYPES_H" variable (:constant-flag t) nil [38 58])
+            ("linux/stddef.h" include (:system-flag t) nil [60 85])
+            ("__NFDBITS" variable (:constant-flag t) nil [691 700])
+            ("__FD_SETSIZE" variable (:constant-flag t) nil [758 770])
+            ("__FDSET_LONGS" variable (:constant-flag t) nil [806 819])
+            ("__FDELT" variable (:constant-flag t) nil [869 876])
+            ("__FDMASK" variable (:constant-flag t) nil [923 931])
+            ("__kernel_fd_set" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("fds_bits" variable
+                             (:dereference 1
+                              :type "unsigned long")
+                              (reparse-symbol classsubparts) [981 1020]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [963 1039])
+            ("__kernel_sighandler_t" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [1082 1117])
+            ("__kernel_key_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [1150 1177])
+            ("__kernel_mqd_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [1178 1205])
+            ("asm/posix_types.h" include (:system-flag t) nil [1207 1235]))          
+    :file "posix_types.h"
+    :pointmax 1271
+    :fsize 1270
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax '((TYPEDEF 1074 . 1081))
+    :lexical-table 
+        '(("__FDMASK" (spp-arg-list ("d") 931 . 934) . ((semantic-list "(1UL << ((d) % __NFDBITS))" 935 . 961)))
+          ("__NFDBITS" . ((semantic-list "(8 * sizeof(unsigned long))" 701 . 728)))
+          ("_LINUX_POSIX_TYPES_H")
+          ("__FD_SETSIZE" . ((number "1024" 771 . 775)))
+          ("__FDELT" (spp-arg-list ("d") 876 . 879) . ((semantic-list "((d) / __NFDBITS)" 880 . 897)))
+          ("__FDSET_LONGS" . ((semantic-list "(__FD_SETSIZE/__NFDBITS)" 820 . 844)))
+          )
+
+    )
+   (semanticdb-table "stddef.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINUX_STDDEF_H" variable (:constant-flag t) nil [33 48])
+            ("NULL" variable (:constant-flag t) nil [97 101]))          
+    :file "stddef.h"
+    :pointmax 151
+    :fsize 150
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NULL" . ((number "0" 102 . 103)))
+          ("_LINUX_STDDEF_H")
+          )
+
+    )
+   (semanticdb-table "limits.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINUX_LIMITS_H" variable (:constant-flag t) nil [33 48])
+            ("NR_OPEN" variable (:constant-flag t) nil [58 65])
+            ("NGROUPS_MAX" variable (:constant-flag t) nil [88 99])
+            ("ARG_MAX" variable (:constant-flag t) nil [160 167])
+            ("LINK_MAX" variable (:constant-flag t) nil [232 240])
+            ("MAX_CANON" variable (:constant-flag t) nil [291 300])
+            ("MAX_INPUT" variable (:constant-flag t) nil [360 369])
+            ("NAME_MAX" variable (:constant-flag t) nil [425 433])
+            ("PATH_MAX" variable (:constant-flag t) nil [483 491])
+            ("PIPE_BUF" variable (:constant-flag t) nil [555 563])
+            ("XATTR_NAME_MAX" variable (:constant-flag t) nil [624 638])
+            ("XATTR_SIZE_MAX" variable (:constant-flag t) nil [697 711])
+            ("XATTR_LIST_MAX" variable (:constant-flag t) nil [774 788])
+            ("RTSIG_MAX" variable (:constant-flag t) nil [852 861]))          
+    :file "limits.h"
+    :pointmax 875
+    :fsize 874
+    :lastmodtime '(20038 14011)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LINUX_LIMITS_H")
+          ("NAME_MAX" . ((number "255" 442 . 445)))
+          ("RTSIG_MAX" . ((number "32" 864 . 866)))
+          ("ARG_MAX" . ((number "131072" 174 . 180)))
+          ("NGROUPS_MAX" . ((number "65536" 103 . 108)))
+          ("PATH_MAX" . ((number "4096" 499 . 503)))
+          ("NR_OPEN" . ((number "1024" 74 . 78)))
+          ("MAX_CANON" . ((number "255" 308 . 311)))
+          ("XATTR_NAME_MAX" . ((number "255" 641 . 644)))
+          ("LINK_MAX" . ((number "127" 249 . 252)))
+          ("XATTR_SIZE_MAX" . ((number "65536" 712 . 717)))
+          ("PIPE_BUF" . ((number "4096" 571 . 575)))
+          ("MAX_INPUT" . ((number "255" 377 . 380)))
+          ("XATTR_LIST_MAX" . ((number "65536" 789 . 794)))
+          )
+
+    )
+   )
+  :file "!usr!include!linux!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

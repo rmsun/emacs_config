@@ -1,0 +1,156 @@
+;; Object udpcliserv/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "udpcliserv/"
+  :tables (list 
+   (semanticdb-table "udpserv01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35 44])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45 58]))                  
+                :type "int")
+                nil [26 607]))          
+    :file "udpserv01.c"
+    :pointmax 606
+    :fsize 607
+    :lastmodtime '(20181 35715)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dg_echo.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("dg_echo" function
+               (:arguments 
+                  ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [39 50])
+                    ("pcliaddr" variable
+                       (:pointer 1
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51 77])
+                    ("clilen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78 95]))                  
+                :type "void")
+                nil [26 347]))          
+    :file "dg_echo.c"
+    :pointmax 349
+    :fsize 347
+    :lastmodtime '(20181 34998)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "udpcli01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35 44])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45 58]))                  
+                :type "int")
+                nil [26 567]))          
+    :file "udpcli01.c"
+    :pointmax 568
+    :fsize 567
+    :lastmodtime '(20181 35190)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dg_cli.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("dg_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38 47])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [48 59])
+                    ("pservaddr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60 93])
+                    ("servlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 112]))                  
+                :type "void")
+                nil [26 505]))          
+    :file "dg_cli.c"
+    :pointmax 507
+    :fsize 506
+    :lastmodtime '(20180 57845)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dgcliaddr.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("dg_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38 47])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [48 59])
+                    ("pservaddr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60 93])
+                    ("servlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 112]))                  
+                :type "void")
+                nil [26 812]))          
+    :file "dgcliaddr.c"
+    :pointmax 814
+    :fsize 813
+    :lastmodtime '(20181 45972)
+    :unmatched-syntax '((symbol 31 . 37) (VOID 26 . 30) (symbol 31 . 37) (VOID 26 . 30) (symbol 31 . 35) (VOID 26 . 30) (symbol 31 . 34) (VOID 26 . 30) (symbol 31 . 33) (VOID 26 . 30) (symbol 31 . 33) (VOID 26 . 30) (VOID 26 . 30) (symbol 26 . 28) (symbol 2 . 4) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 7) (punctuation 1 . 2) (symbol 2 . 8) (punctuation 1 . 2) (symbol 2 . 7) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2))
+    )
+   (semanticdb-table "dgcliconnect.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("dg_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38 47])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [48 59])
+                    ("pservaddr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60 93])
+                    ("servlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 112]))                  
+                :type "void")
+                nil [26 501]))          
+    :file "dgcliconnect.c"
+    :pointmax 502
+    :fsize 501
+    :lastmodtime '(20182 12375)
+    :unmatched-syntax '((symbol 31 . 37) (VOID 26 . 30) (symbol 31 . 36) (VOID 26 . 30) (symbol 31 . 34) (VOID 26 . 30) (symbol 31 . 33) (VOID 26 . 30) (symbol 26 . 29) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2))
+    )
+   )
+  :file "!home!jason!Documents!linux_network_programming!udpcliserv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

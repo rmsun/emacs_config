@@ -1,0 +1,23 @@
+/***********************************************
+Describe: this program is a very simple example
+          of http server
+Date: Nov 14, 2011
+ ***********************************************/
+
+#include "shttpd.h"
+
+static void remove_double_dots(char *s)
+{
+     char *p = s;
+     
+     while (*s != '\0')
+     {
+          *p++ = *s++;
+          if (s[-1] == '/' || s[-1] == '\\')
+          {
+               while (*s == '.' || *s == '/' || *s == '\\')
+                    s++;
+          }
+     }
+     *p = '\0';
+}

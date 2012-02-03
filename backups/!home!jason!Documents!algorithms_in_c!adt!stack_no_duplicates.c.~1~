@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include "item.h"
+#include "stack.h"
+
+static int *s, *t;
+static int N;
+
+void stackInit(int maxN)
+{
+     int i;
+     s = malloc(maxN*sizeof(int));
+     t = malloc(maxN*sizeof(int));
+     for (i = 0; i < maxN; i++)
+          t[i] = 0;
+     N = 0;
+}
+
+int stackEmpty()
+{
+     return !N;
+}
+
+void stackPush(Item item)
+{
+     if (t[item] == 1)
+          return;
+     s[N++] = item;
+     t[item] = 1;
+}
+
+Item stackPop()
+{
+     N--;
+     t[s[N]] = 0;
+     return s[N];
+}
+
+    

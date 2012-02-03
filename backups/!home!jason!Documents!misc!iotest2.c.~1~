@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+     char ch1[20], ch2[];
+     scanf("%s", ch1);
+     printf("%s", ch1);
+     scanf("%s", ch2);
+     printf("%s", ch2);
+     return 0;
+}

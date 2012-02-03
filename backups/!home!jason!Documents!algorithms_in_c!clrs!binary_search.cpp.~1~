@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+#define NOTFOUND 10000
+using namespace std;
+
+int binary_search(int *a, int key, int p, int r)
+{
+    int i = (r - p)/2 + p;
+    if (p == r && *(a+p) != key)
+        return NOTFOUND;
+    if (*(a+i) == key)
+        return i;
+    else if (*(a+i) > key)
+        binary_search(a, key, p, i-1);
+         else
+             binary_search(a, key, i+1, r);
+}
+
+int main(int argc, char *argv[])
+{
+    
+    return 0;
+}

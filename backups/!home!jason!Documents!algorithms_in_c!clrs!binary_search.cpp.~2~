@@ -1,0 +1,97 @@
+#include <iostream>
+#include <cstdlib>
+#define NOTFOUND 10000
+#define MAX_VALUE 10000  //设置哨兵
+
+using namespace std;
+
+void merge(int *a, int p, int q, int r)
+{
+    int num1, num2;
+    num1 = q - p +1;
+    num2 = r - q;
+    int *left = (int *)malloc((num1+1)*sizeof(int));
+    int *right = (int *)malloc((num2+1)*sizeof(int));
+    
+    for (int i = 0; i < num1; i++)
+        *(left+i) = *(a+p+i);
+    *(left+num1) = MAX_VALUE;
+ 
+    for (int i = 0; i < num2; i++)
+        *(right+i) = *(a+q+1+i);
+    *(right+num2) = MAX_VALUE;
+    
+    int index1 = 0;
+    int index2 = 0;
+    for (int i = p; i <= r; i++)
+    {
+        if (*(left+index1) < *(right+index2))
+        {
+            *(a+i) = *(left+index1);
+            index1++;
+        }
+        else
+        {
+            *(a+i) = *(right+index2);
+            index2++;
+        }
+    }
+    free(left);
+    free(right);
+}
+
+void
+merge_sort(int *a, int p, int r)
+{
+    if (p < r)
+    {
+        int q = (p + r) / 2;
+        merge_sort(a, p, q);
+        merge_sort(a, q+1, r);
+        merge(a, p, q, r);
+    }
+}
+
+
+int binary_search(int *a, int key, int p, int r)
+{
+    int i = (r - p)/2 + p;
+    if (p == r && *(a+p) != key)
+        return NOTFOUND;
+    if (*(a+i) == key)
+        return i;
+    else if (*(a+i) > key)
+        binary_search(a, key, p, i-1);
+         else
+             binary_search(a, key, i+1, r);
+}
+
+int main(int argc, char *argv[])
+{
+    int n, temp, key;
+    cout << "please input the number of the values that need to sort: " << endl;
+    cin >> n;
+    int *a = (int *)malloc(n * sizeof(int));
+    cout << "please input each value: " << endl;
+    
+    for (int i = 0; i < n; i++)
+        cin >> *(a+i);
+    
+    merge_sort(a, 0, n-1);
+
+    cout << "the value after sort: " << endl;
+    for (int i = 0; i < n; i++)
+        cout << *(a+i) << " ";
+    cout << endl;
+    
+    cout << "please input the number you want to search: " << endl;
+    cin >> key;
+    int i =  binary_search(a, key, 0, n-1);
+    if (i != NOTFOUND)
+        cout << "the position of key is: " << i << endl;
+    else 
+        cout << "key not found" << endl;
+    free(a);
+    
+    return 0;
+}

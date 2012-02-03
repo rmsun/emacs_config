@@ -1,0 +1,1478 @@
+;; Object shttpd/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "shttpd/"
+  :tables (list 
+   (semanticdb-table "shttpd.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__SHTTPD_H__" variable (:constant-flag t) nil [30 42])
+            ("stdio.h" include (:system-flag t) nil [43 61])
+            ("stdlib.h" include (:system-flag t) nil [62 81])
+            ("string.h" include (:system-flag t) nil [82 101])
+            ("time.h" include (:system-flag t) nil [102 119])
+            ("sys/types.h" include (:system-flag t) nil [120 142])
+            ("sys/stat.h" include (:system-flag t) nil [143 164])
+            ("sys/socket.h" include (:system-flag t) nil [165 188])
+            ("sys/wait.h" include (:system-flag t) nil [189 210])
+            ("sys/time.h" include (:system-flag t) nil [211 232])
+            ("netinet/in.h" include (:system-flag t) nil [233 256])
+            ("netdb.h" include (:system-flag t) nil [281 299])
+            ("pthread.h" include (:system-flag t) nil [326 346])
+            ("arpa/inet.h" include (:system-flag t) nil [347 369])
+            ("signal.h" include (:system-flag t) nil [370 389])
+            ("errno.h" include (:system-flag t) nil [390 408])
+            ("unistd.h" include (:system-flag t) nil [463 482])
+            ("dirent.h" include (:system-flag t) nil [530 549])
+            ("limits.h" include (:system-flag t) nil [576 595])
+            ("getopt.h" include (:system-flag t) nil [596 615])
+            ("unistd.h" include (:system-flag t) nil [616 635])
+            ("sys/types.h" include (:system-flag t) nil [636 658])
+            ("sys/stat.h" include (:system-flag t) nil [659 680])
+            ("fcntl.h" include (:system-flag t) nil [681 699])
+            ("ctype.h" include (:system-flag t) nil [700 718])
+            ("stddef.h" include (:system-flag t) nil [719 738])
+            ("isCGI" variable (:type "int") nil [740 750])
+            ("" type
+               (:members 
+                  ( ("WORKER_INITED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [781 795])
+                    ("WORKER_RUNNING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [796 811])
+                    ("WORKER_DETACHING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [811 828])
+                    ("WORKER_DETACHED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [829 845])
+                    ("WORKER_IDEL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [845 857]))                  
+                :type "enum")
+                nil [776 858])
+            ("conf_opts" type
+               (:members 
+                  ( ("CGIRoot" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [879 897])
+                    ("DefaultFile" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [911 933])
+                    ("DocumentRoot" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [947 970])
+                    ("ConfigFile" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [982 1003])
+                    ("ListenPort" variable (:type "int") (reparse-symbol classsubparts) [1020 1035])
+                    ("MaxClient" variable (:type "int") (reparse-symbol classsubparts) [1048 1062])
+                    ("TimeOut" variable (:type "int") (reparse-symbol classsubparts) [1078 1090])
+                    ("InitClient" variable (:type "int") (reparse-symbol classsubparts) [1104 1119]))                  
+                :type "struct")
+                nil [860 1137])
+            ("SHTTPD_METHOD_TYPE" type
+               (:typedef ("SHTTPD_METHOD_TYPE" type (:type "enum") nil nil)
+                :superclasses "SHTTPD_METHOD_TYPE"
+                :type "typedef")
+                nil [1157 1403])
+            ("SHTTPD_METHOD_TYPE" type
+               (:members 
+                  ( ("METHOD_GET" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1191 1202])
+                    ("METHOD_POST" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1221 1233])
+                    ("METHOD_PUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1251 1262])
+                    ("METHOD_DELETE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1281 1295])
+                    ("METHOD_HEAD" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1311 1323])
+                    ("METHOD_CGI" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1340 1351])
+                    ("METHOD_NOTSUPPORT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1365 1384]))                  
+                :type "enum")
+                nil [1157 1403])
+            ("" type
+               (:members 
+                  ( ("HDR_DATE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1411 1420])
+                    ("HDR_INT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1421 1429])
+                    ("HDR_STRING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1430 1441]))                  
+                :type "enum")
+                nil [1405 1442])
+            ("shttpd_method" type
+               (:typedef ("shttpd_method" type (:type "struct") nil nil)
+                :superclasses "shttpd_method"
+                :type "typedef")
+                nil [1469 1559])
+            ("shttpd_method" type
+               (:members 
+                  ( ("type" variable (:type ("SHTTPD_METHOD_TYPE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1500 1524])
+                    ("name_index" variable (:type "int") (reparse-symbol classsubparts) [1526 1541]))                  
+                :type "struct")
+                nil [1469 1559])
+            ("vec" type
+               (:typedef ("vec" type (:type "struct") nil nil)
+                :superclasses "vec"
+                :type "typedef")
+                nil [1617 1694])
+            ("vec" type
+               (:members 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1640 1650])
+                    ("len" variable (:type "int") (reparse-symbol classsubparts) [1652 1662])
+                    ("type" variable (:type ("SHTTPD_METHOD_TYPE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1664 1688]))                  
+                :type "struct")
+                nil [1617 1694])
+            ("big_int_t" variable (:constant-flag t) nil [1803 1812])
+            ("http_header" type
+               (:members 
+                  ( ("len" variable (:type "int") (reparse-symbol classsubparts) [1841 1850])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [1879 1889])
+                    ("offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1912 1927])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1955 1966]))                  
+                :type "struct")
+                nil [1819 1990])
+            ("OFFSET" variable (:constant-flag t) nil [2101 2107])
+            ("variant" type
+               (:members 
+                  ( ("v_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2256 2269])
+                    ("v_int" variable (:type "int") (reparse-symbol classsubparts) [2271 2282])
+                    ("v_big_int" variable (:type "long") (reparse-symbol classsubparts) [2284 2304])
+                    ("v_time" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2306 2321])
+                    ("v_func" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2323 2345])
+                    ("v_void" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2347 2361])
+                    ("v_vec" variable (:type ("vec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2363 2380]))                  
+                :type "union")
+                nil [2239 2383])
+            ("URI_MAX" variable (:constant-flag t) nil [2394 2401])
+            ("headers" type
+               (:members 
+                  ( ("cl" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2504 2521])
+                    ("ct" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2547 2564])
+                    ("connection" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2588 2613])
+                    ("ims" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2635 2653])
+                    ("user" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2682 2701])
+                    ("auth" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2728 2747])
+                    ("useragent" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2771 2795])
+                    ("referer" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2817 2839])
+                    ("cookie" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2858 2879])
+                    ("location" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2898 2921])
+                    ("range" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2941 2961])
+                    ("status" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [2979 3000])
+                    ("transenc" variable (:type ("variant" type (:type "union") nil nil)) (reparse-symbol classsubparts) [3019 3042]))                  
+                :type "struct")
+                nil [2486 3071])
+            ("cgi" type
+               (:members 
+                  ( ("iscgi" variable (:type "int") (reparse-symbol classsubparts) [3086 3096])
+                    ("bin" variable (:type ("vec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3098 3113])
+                    ("para" variable (:type ("vec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3115 3131]))                  
+                :type "struct")
+                nil [3073 3135])
+            ("worker_ctl" type
+               (:prototype t
+                :type "struct")
+                nil [3137 3155])
+            ("worker_opts" type
+               (:members 
+                  ( ("th" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3177 3190])
+                    ("flags" variable (:type "int") (reparse-symbol classsubparts) [3205 3215])
+                    ("mutex" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3229 3251])
+                    ("work" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3264 3288]))                  
+                :type "struct")
+                nil [3156 3304])
+            ("worker_conn" type
+               (:prototype t
+                :type "struct")
+                nil [3306 3326])
+            ("conn_request" type
+               (:members 
+                  ( ("req" variable (:type ("vec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3358 3373])
+                    ("head" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3385 3396])
+                    ("uri" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3414 3424])
+                    ("rpath" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3445 3465])
+                    ("method" variable (:type "int") (reparse-symbol classsubparts) [3487 3499])
+                    ("major" variable (:type "unsigned long") (reparse-symbol classsubparts) [3528 3548])
+                    ("minor" variable (:type "unsigned long") (reparse-symbol classsubparts) [3558 3578])
+                    ("ch" variable (:type ("headers" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3589 3607])
+                    ("conn" variable
+                       (:pointer 1
+                        :type ("worker_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3619 3644])
+                    ("err" variable (:type "int") (reparse-symbol classsubparts) [3657 3665]))                  
+                :type "struct")
+                nil [3336 3668])
+            ("conn_response" type
+               (:members 
+                  ( ("res" variable (:type ("vec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3704 3719])
+                    ("birth_time" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3731 3749])
+                    ("expire_time" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3760 3779])
+                    ("status" variable (:type "int") (reparse-symbol classsubparts) [3790 3802])
+                    ("cl" variable (:type "int") (reparse-symbol classsubparts) [3815 3823])
+                    ("fd" variable (:type "int") (reparse-symbol classsubparts) [3839 3848])
+                    ("fsate" variable (:type ("stat" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3864 3882])
+                    ("conn" variable
+                       (:pointer 1
+                        :type ("worker_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3897 3922]))                  
+                :type "struct")
+                nil [3681 3937])
+            ("worker_conn" type
+               (:members 
+                  ( ("K" variable (:constant-flag t) (reparse-symbol classsubparts) [3968 3969])
+                    ("dreq" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3976 3993])
+                    ("dres" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4005 4022])
+                    ("cs" variable (:type "int") (reparse-symbol classsubparts) [4035 4043])
+                    ("to" variable (:type "int") (reparse-symbol classsubparts) [4063 4071])
+                    ("con_res" variable (:type ("conn_response" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4095 4124])
+                    ("con_req" variable (:type ("conn_request" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4126 4154])
+                    ("work" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4157 4181]))                  
+                :type "struct")
+                nil [3938 4197])
+            ("worker_ctl" type
+               (:members 
+                  ( ("opts" variable (:type ("worker_opts" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4219 4243])
+                    ("conn" variable (:type ("worker_conn" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4245 4269]))                  
+                :type "struct")
+                nil [4199 4272])
+            ("mine_type" type
+               (:members 
+                  ( ("extension" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4292 4308])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [4310 4322])
+                    ("ext_len" variable (:type "int") (reparse-symbol classsubparts) [4324 4338])
+                    ("mime_type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4340 4356]))                  
+                :type "struct")
+                nil [4273 4359])
+            ("Para_Init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4375 4384])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4385 4398]))                  
+                :type "void")
+                nil [4360 4399])
+            ("Request_Parse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4419 4443]))                  
+                :type "int")
+                nil [4401 4444])
+            ("Request_Handle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4464 4488]))                  
+                :type "int")
+                nil [4445 4489])
+            ("Worker_ScheduleRun" function
+               (:prototype-flag t
+                :type "int")
+                nil [4492 4517])
+            ("Worker_ScheduleStop" function
+               (:prototype-flag t
+                :type "int")
+                nil [4518 4544])
+            ("Method_Do" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4560 4584]))                  
+                :type "void")
+                nil [4545 4585])
+            ("uri_parse" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4601 4611])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [4612 4620]))                  
+                :type "void")
+                nil [4586 4621])
+            ("Mine_Type" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("uri" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4651 4661])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [4662 4670])
+                    ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4671 4695]))                  
+                :type ("mine_type" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4623 4696])
+            ("DBGPRINT" variable (:constant-flag t) nil [4708 4716]))          
+    :file "shttpd.h"
+    :pointmax 4751
+    :fsize 4985
+    :lastmodtime '(20166 10800)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DBGPRINT" . ((symbol "printf" 4693 . 4699)))
+          ("OFFSET" (spp-arg-list ("x") 2083 . 2086) . ((symbol "offsetof" 2087 . 2095) (semantic-list "(struct headers, x)" 2095 . 2114)))
+          ("big_int_t" . ((LONG "long" 1789 . 1793)))
+          ("K" . ((number "1024" 3946 . 3950)))
+          ("__SHTTPD_H__")
+          ("URI_MAX" . ((number "16384" 2379 . 2384)))
+          )
+
+    )
+   (semanticdb-table "shttpd_parameters.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("l_opt_arg" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [21 44])
+            ("shortopts" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [45 88])
+            ("longopts" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [178 606])
+            ("conf_para" variable
+               (:typemodifiers ("extern")
+                :type ("conf_opts" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [609 643])
+            ("display_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [670 675]))                  
+                :type "void")
+                nil [644 1118])
+            ("display_para" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1120 1597])
+            ("conf_readline" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1624 1631])
+                    ("buff" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1632 1643])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [1644 1652]))                  
+                :type "int")
+                nil [1599 2039])
+            ("Para_CmdParse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2067 2076])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2077 2090]))                  
+                :type "int")
+                nil [2042 3961])
+            ("Para_FileParse" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4000 4011]))                  
+                :type "void")
+                nil [3980 5663])
+            ("Para_Init" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [5681 5690])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5691 5704]))                  
+                :type "void")
+                nil [5666 5883]))          
+    :file "shttpd_parameters.c"
+    :pointmax 5885
+    :fsize 6100
+    :lastmodtime '(20163 4073)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "shttpd_mine.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("" type
+               (:members 
+                  ( ("MINET_HTML" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [30 41])
+                    ("MINET_HTM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [42 52])
+                    ("MINET_TXT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [53 63])
+                    ("MINET_CSS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [64 74])
+                    ("MINET_ICO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [75 85])
+                    ("MINET_GIF" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [86 96])
+                    ("MINET_JPG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [97 107])
+                    ("MINET_JPEG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [108 119])
+                    ("MINET_PNG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [121 131])
+                    ("MINET_SVG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [132 142])
+                    ("MINET_TORRENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [143 157])
+                    ("MINET_WAV" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [158 168])
+                    ("MINET_MP3" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [169 179])
+                    ("MINET_MID" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [180 190])
+                    ("MINET_M3U" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [191 201])
+                    ("MINET_RAM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [202 212])
+                    ("MINET_RA" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [214 223])
+                    ("MINET_DOC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [224 234])
+                    ("MINET_EXE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [235 245])
+                    ("MINET_ZIP" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [246 256])
+                    ("MINET_XLS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [257 267])
+                    ("MINET_TGZ" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [268 278])
+                    ("MINET_TARGZ" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [279 291])
+                    ("MINET_TAR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [292 302])
+                    ("MINET_GZ" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [304 313])
+                    ("MINET_ARJ" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [314 324])
+                    ("MINET_RAR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [325 335])
+                    ("MINET_RTF" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [336 346])
+                    ("MINET_PDF" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [347 357])
+                    ("MINET_SWF" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [358 368])
+                    ("MINET_MPG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [369 379])
+                    ("MINET_MPEG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [380 391])
+                    ("MINET_ASF" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [393 403])
+                    ("MINET_AVI" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [404 414])
+                    ("MINET_BMP" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [415 425])
+                    ("MINET_PY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [426 436]))                  
+                :type "enum")
+                nil [23 437])
+            ("builtin_mime_types" variable
+               (:dereference 1
+                :type ("mine_type" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [439 2291])
+            ("DELIM_CHARS" variable (:constant-flag t) nil [2300 2311])
+            ("Mine_Type" function
+               (:pointer 1
+                :arguments 
+                  ( ("uri" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2373 2383])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2384 2392])
+                    ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2393 2417]))                  
+                :type ("mine_type" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2345 2973]))          
+    :file "shttpd_mine.c"
+    :pointmax 2967
+    :fsize 2973
+    :lastmodtime '(20166 16544)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DELIM_CHARS" . ((string "\",\"" 2312 . 2315)))
+          )
+
+    )
+   (semanticdb-table "shttpd_request.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("Error_400" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44 68]))                  
+                :type "void")
+                nil [22 69])
+            ("Error_403" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [92 116]))                  
+                :type "void")
+                nil [70 117])
+            ("Error_404" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [140 164]))                  
+                :type "void")
+                nil [118 165])
+            ("Error_505" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [188 212]))                  
+                :type "void")
+                nil [166 213])
+            ("http_headers" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("http_header" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [215 938])
+            ("_shttpd_methods" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("vec" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [939 975])
+            ("conf_para" variable (:type ("conf_opts" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [976 1003])
+            ("montoi" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1104 1112]))                  
+                :type "int")
+                nil [1086 1455])
+            ("date_to_epoch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1561 1569]))                  
+                :type ("time_t" type (:type "class") nil nil))
+                nil [1533 2442])
+            ("Request_HeaderParse" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2469 2477])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2478 2486])
+                    ("parsed" variable
+                       (:pointer 1
+                        :type ("headers" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2487 2510]))                  
+                :type "void")
+                nil [2444 3595])
+            ("JUMPOVER_CHAR" variable (:constant-flag t) nil [3605 3618])
+            ("JUMPTO_CHAR" variable (:constant-flag t) nil [3669 3680])
+            ("Request_Parse" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3752 3776]))                  
+                :type "int")
+                nil [3733 6470])
+            ("Request_Handle" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6494 6518]))                  
+                :type "int")
+                nil [6475 8326]))          
+    :file "shttpd_request.c"
+    :pointmax 7842
+    :fsize 8508
+    :lastmodtime '(20166 18521)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("JUMPOVER_CHAR" (spp-arg-list ("p" "over") 3618 . 3626) . 
+              ((DO "do" 3627 . 3629) (semantic-list "{for(;*p== over;p++);}" 3629 . 3651) (WHILE "while" 3651 . 3656) (semantic-list "(0)" 3656 . 3659) (punctuation ";" 3659 . 3660)))
+          ("JUMPTO_CHAR" (spp-arg-list ("p" "to") 3680 . 3686) . 
+              ((DO "do" 3687 . 3689) (semantic-list "{for(;*p!= to;p++);}" 3689 . 3709) (WHILE "while" 3709 . 3714) (semantic-list "(0)" 3714 . 3717) (punctuation ";" 3717 . 3718)))
+          )
+
+    )
+   (semanticdb-table "shttpd_worker.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("workersnum" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [22 48])
+            ("wctls" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("worker_ctl" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [60 99])
+            ("conf_para" variable
+               (:typemodifiers ("extern")
+                :type ("conf_opts" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [108 142])
+            ("thread_init" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [143 199])
+            ("WORKER_ISSTATUS" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [227 238]))                  
+                :type "int")
+                nil [200 239])
+            ("Worker_Init" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [240 266])
+            ("Worker_Add" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [289 295]))                  
+                :type "int")
+                nil [267 296])
+            ("Worker_Delete" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [323 329]))                  
+                :type "void")
+                nil [297 330])
+            ("Worker_Destory" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [331 360])
+            ("do_work" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [384 408]))                  
+                :type "void")
+                nil [364 1770])
+            ("worker" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1803 1813]))                  
+                :type "void")
+                nil [1783 2856])
+            ("WORKER_ISSTATUS" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2895 2906]))                  
+                :type "int")
+                nil [2868 3029])
+            ("Worker_Init" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3042 4225])
+            ("Worker_Add" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4259 4265]))                  
+                :type "int")
+                nil [4237 4755])
+            ("Worker_Delete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [4792 4798]))                  
+                :type "void")
+                nil [4766 4923])
+            ("Worker_Destory" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [4934 5505])
+            ("STATUS_RUNNING" variable (:constant-flag t) nil [5516 5530])
+            ("STATSU_STOP" variable (:constant-flag t) nil [5541 5552])
+            ("SCHEDULESTATUS" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [5555 5598])
+            ("Worker_ScheduleRun" function
+               (:arguments 
+                  ( ("ss" variable (:type "int") (reparse-symbol arg-sub-list) [5680 5687]))                  
+                :type "int")
+                nil [5657 6953])
+            ("Worker_ScheduleStop" function (:type "int") nil [6966 7506]))          
+    :file "shttpd_worker.c"
+    :pointmax 7508
+    :fsize 7902
+    :lastmodtime '(20165 56742)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("STATSU_STOP" . ((number "0" 5417 . 5418)))
+          ("STATUS_RUNNING" . ((number "1" 5395 . 5396)))
+          )
+
+    )
+   (semanticdb-table "shttpd.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("conf_para" variable (:type ("conf_opts" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [22 281])
+            ("_shttpd_methods" variable
+               (:dereference 1
+                :type ("vec" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [282 468])
+            ("sig_int" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [507 515]))                  
+                :type "void")
+                nil [487 553])
+            ("sig_pipe" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [594 602]))                  
+                :type "void")
+                nil [573 615])
+            ("do_listen" function (:type "int") nil [616 1644])
+            ("l_main" function (:type "int") nil [1648 1708])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1718 1727])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1728 1741]))                  
+                :type "int")
+                nil [1709 1855]))          
+    :file "shttpd.c"
+    :pointmax 1856
+    :fsize 1923
+    :lastmodtime '(20163 5377)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "shttpd_method.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("Method_DoGet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [242 266]))                  
+                :type "int")
+                nil [218 2389])
+            ("Method_DoPost" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2416 2440]))                  
+                :type "int")
+                nil [2391 2455])
+            ("Method_DoHead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2482 2506]))                  
+                :type "int")
+                nil [2457 2603])
+            ("Method_DoPut" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2629 2653]))                  
+                :type "int")
+                nil [2605 2668])
+            ("Method_DoDelete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2697 2721]))                  
+                :type "int")
+                nil [2670 2736])
+            ("Method_DoCGI" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2762 2786]))                  
+                :type "int")
+                nil [2738 2909])
+            ("Method_DoList" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2936 2960]))                  
+                :type "int")
+                nil [2911 2975])
+            ("Method_Do" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2992 3016]))                  
+                :type "void")
+                nil [2977 3492]))          
+    :file "shttpd_method.c"
+    :pointmax 3496
+    :fsize 3561
+    :lastmodtime '(20169 48159)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "shttpd_error.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("" type
+               (:members 
+                  ( ("ERROR301" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [29 38])
+                    ("ERROR302" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [39 48])
+                    ("ERROR303" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [49 58])
+                    ("ERROR304" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [59 68])
+                    ("ERROR305" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [69 78])
+                    ("ERROR307" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [79 88])
+                    ("ERROR400" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [90 99])
+                    ("ERROR401" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [100 109])
+                    ("ERROR402" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [110 119])
+                    ("ERROR403" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [120 129])
+                    ("ERROR404" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [130 139])
+                    ("ERROR405" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [140 149])
+                    ("ERROR406" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [150 159])
+                    ("ERROR407" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [162 171])
+                    ("ERROR408" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [172 181])
+                    ("ERROR409" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [182 191])
+                    ("ERROR410" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [192 201])
+                    ("ERROR411" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [202 211])
+                    ("ERROR412" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [212 221])
+                    ("ERROR413" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [222 231])
+                    ("ERROR414" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [233 242])
+                    ("ERROR415" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [243 252])
+                    ("ERROR416" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [253 262])
+                    ("ERROR417" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [263 272])
+                    ("ERROR500" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [274 283])
+                    ("ERROR501" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [284 293])
+                    ("ERROR502" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [294 303])
+                    ("ERROR503" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [304 313])
+                    ("ERROR504" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [314 323])
+                    ("ERROR505" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [324 334]))                  
+                :type "enum")
+                nil [22 335])
+            ("error_mine" type
+               (:members 
+                  ( ("error_code" variable (:type "int") (reparse-symbol classsubparts) [357 372])
+                    ("content" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [374 388])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [390 400])
+                    ("status" variable (:type "int") (reparse-symbol classsubparts) [402 413]))                  
+                :type "struct")
+                nil [337 416])
+            ("_error_http" variable
+               (:dereference 1
+                :type ("error_mine" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [417 1734])
+            ("Error_400" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1751 1775]))                  
+                :type "void")
+                nil [1736 1782])
+            ("Error_403" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1799 1823]))                  
+                :type "void")
+                nil [1784 1830])
+            ("Error_404" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1847 1871]))                  
+                :type "void")
+                nil [1832 1878])
+            ("Error_505" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1895 1919]))                  
+                :type "void")
+                nil [1880 1926])
+            ("GenerateErrorMine" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1950 1975]))                  
+                :type "int")
+                nil [1928 2601]))          
+    :file "shttpd_error.c"
+    :pointmax 2603
+    :fsize 2733
+    :lastmodtime '(20163 4073)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "shttpd_uri.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [193 212])
+            ("remove_double_dots" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [245 253]))                  
+                :type "void")
+                nil [214 512])
+            ("uri_decode" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [536 546])
+                    ("src_len" variable (:type "int") (reparse-symbol arg-sub-list) [547 559])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [560 570])
+                    ("dst_len" variable (:type "int") (reparse-symbol arg-sub-list) [571 583]))                  
+                :type "int")
+                nil [514 1370])
+            ("uri_parse" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1387 1397])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [1398 1406]))                  
+                :type "void")
+                nil [1372 1481]))          
+    :file "shttpd_uri.c"
+    :pointmax 1482
+    :fsize 1020
+    :lastmodtime '(20163 4073)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HEXTOI" (spp-arg-list ("x") 621 . 624) . ((semantic-list "(isdigit(x) ? x - '0' : x - 'W')" 628 . 660)))
+          )
+
+    )
+   (semanticdb-table "shttpd_cgi.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shttpd.h" include nil nil [1 20])
+            ("CGISTR" variable (:constant-flag t) nil [30 36])
+            ("ARGNUM" variable (:constant-flag t) nil [57 63])
+            ("READIN" variable (:constant-flag t) nil [75 81])
+            ("WRITEOUT" variable (:constant-flag t) nil [92 100])
+            ("conf_para" variable
+               (:typemodifiers ("extern")
+                :type ("conf_opts" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [104 138])
+            ("GenerateDirFile" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [160 184]))                  
+                :type "int")
+                nil [140 5130])
+            ("cgiHandler" function
+               (:arguments 
+                  ( ("wctl" variable
+                       (:pointer 1
+                        :type ("worker_ctl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5148 5172]))                  
+                :type "int")
+                nil [5133 10491]))          
+    :file "shttpd_cgi.c"
+    :pointmax 10488
+    :fsize 10901
+    :lastmodtime '(20169 48080)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PATHLENGTH" . ((number "2048" 1282 . 1286)))
+          ("CGISTR" . ((string "\"/cgi-bin/\"" 37 . 48)))
+          ("READIN" . ((number "0" 82 . 83)))
+          ("WRITEOUT" . ((number "1" 101 . 102)))
+          ("ARGNUM" . ((number "16" 64 . 66)))
+          )
+
+    )
+   )
+  :file "!home!jason!Documents!linux_network_programming!shttpd!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

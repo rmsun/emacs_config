@@ -1,0 +1,136 @@
+;; Object threadpoll/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "threadpoll/"
+  :tables (list 
+   (semanticdb-table "CThreadManage.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CThreadManage" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [23 31])
+                    ("m_pool" variable
+                       (:pointer 1
+                        :type ("CThreadPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37 57])
+                    ("m_NumOfThread" variable (:type "int") (reparse-symbol classsubparts) [63 81])
+                    ("protected" label nil (reparse-symbol classsubparts) [88 98])
+                    ("public" label nil (reparse-symbol classsubparts) [105 112])
+                    ("CThreadManage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("CThreadManage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [118 134])
+                    ("CThreadManage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [154 162]))                          
+                        :type ("CThreadManage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [140 163])
+                    ("CThreadManage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [170 195])
+                    ("SetParallelNum" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [227 235]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [207 236])
+                    ("Run" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("job" variable
+                               (:pointer 1
+                                :type ("CJob" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [251 261])
+                            ("jobdata" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [262 276]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [242 277])
+                    ("TerminateAll" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [301 306]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [283 307]))                  
+                :type "class")
+                nil [1 310]))          
+    :file "CThreadManage.h"
+    :pointmax 311
+    :fsize 310
+    :lastmodtime '(20165 5522)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CThreadManage.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("CThreadManage" function
+               (:constructor-flag t
+                :parent "CThreadManage"
+                :type ("CThreadManage" type (:type "class") nil nil))
+                nil [44 147])
+            ("CThreadManage" function
+               (:constructor-flag t
+                :parent "CThreadManage"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [178 186]))                  
+                :type ("CThreadManage" type (:type "class") nil nil))
+                nil [149 260])
+            ("CThreadManage" function
+               (:destructor-flag t
+                :parent "CThreadManage"
+                :type "void")
+                nil [262 344])
+            ("SetParallelNum" function
+               (:parent "CThreadManage"
+                :arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [381 389]))                  
+                :type "void")
+                nil [346 418])
+            ("Run" function
+               (:parent "CThreadManage"
+                :arguments 
+                  ( ("job" variable
+                       (:pointer 1
+                        :type ("CJob" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [444 454])
+                    ("jobdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [455 469]))                  
+                :type "void")
+                nil [420 504])
+            ("TerminateAll" function
+               (:parent "CThreadManage"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [539 544]))                  
+                :type "void")
+                nil [506 576]))          
+    :file "CThreadManage.cpp"
+    :pointmax 577
+    :fsize 576
+    :lastmodtime '(20165 5962)
+    :unmatched-syntax '((symbol 526 . 538) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 537) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 536) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 535) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 535) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 534) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 533) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 531) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 530) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 529) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 529) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 526 . 528) (punctuation 525 . 526) (punctuation 524 . 525) (symbol 511 . 524) (VOID 506 . 510) (symbol 511 . 524) (VOID 506 . 510) (symbol 511 . 524) (VOID 506 . 510) (symbol 511 . 514) (VOID 506 . 510) (symbol 511 . 513) (VOID 506 . 510) (symbol 511 . 512) (VOID 506 . 510) (VOID 506 . 510) (symbol 506 . 509) (symbol 440 . 443) (punctuation 439 . 440) (punctuation 438 . 439) (symbol 425 . 438) (VOID 420 . 424) (symbol 440 . 442) (punctuation 439 . 440) (punctuation 438 . 439) (symbol 425 . 438) (VOID 420 . 424) (symbol 425 . 438) (VOID 420 . 424) (symbol 425 . 429) (VOID 420 . 424) (symbol 425 . 427) (VOID 420 . 424) (symbol 425 . 427) (VOID 420 . 424) (symbol 425 . 426) (VOID 420 . 424) (VOID 420 . 424) (VOID 420 . 424) (symbol 420 . 422) (symbol 420 . 421) (symbol 420 . 422) (symbol 361 . 375) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 375) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 374) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 373) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 372) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 372) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 371) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 369) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 368) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 367) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 366) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 366) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 365) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 364) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 364) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 361 . 363) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (punctuation 360 . 361) (punctuation 359 . 360) (symbol 346 . 359) (symbol 346 . 359) (symbol 346 . 356) (symbol 346 . 355) (symbol 346 . 354) (symbol 346 . 353) (symbol 346 . 354) (symbol 346 . 355) (symbol 346 . 357) (symbol 346 . 349) (symbol 346 . 348) (symbol 278 . 291) (punctuation 277 . 278) (punctuation 276 . 277) (punctuation 275 . 276) (symbol 262 . 275) (symbol 278 . 280) (punctuation 277 . 278) (punctuation 276 . 277) (punctuation 275 . 276) (symbol 262 . 275) (symbol 278 . 280) (punctuation 277 . 278) (punctuation 276 . 277) (punctuation 275 . 276) (symbol 262 . 275) (symbol 278 . 279) (punctuation 277 . 278) (punctuation 276 . 277) (punctuation 275 . 276) (symbol 262 . 275) (punctuation 276 . 277) (punctuation 275 . 276) (symbol 262 . 275) (symbol 262 . 275) (symbol 262 . 266) (symbol 262 . 266) (symbol 262 . 266) (symbol 262 . 265) (symbol 262 . 264) (symbol 164 . 177) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 172) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 171) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 172) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 173) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 175) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 175) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 167) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 164 . 166) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (punctuation 163 . 164) (punctuation 162 . 163) (symbol 149 . 162) (symbol 149 . 162) (symbol 149 . 153) (symbol 149 . 153) (symbol 149 . 152) (symbol 149 . 152) (symbol 149 . 151) (symbol 149 . 151) (symbol 149 . 150) (symbol 59 . 72) (punctuation 58 . 59) (punctuation 57 . 58) (symbol 44 . 57) (symbol 59 . 61) (punctuation 58 . 59) (punctuation 57 . 58) (symbol 44 . 57) (symbol 59 . 61) (punctuation 58 . 59) (punctuation 57 . 58) (symbol 44 . 57) (symbol 59 . 61) (punctuation 58 . 59) (punctuation 57 . 58) (symbol 44 . 57) (punctuation 58 . 59) (punctuation 57 . 58) (symbol 44 . 57) (symbol 44 . 57) (symbol 44 . 57) (symbol 44 . 57) (punctuation 57 . 58) (symbol 44 . 57) (symbol 44 . 51) (symbol 44 . 51) (symbol 44 . 51) (symbol 44 . 50) (symbol 44 . 49) (symbol 44 . 48) (symbol 44 . 47) (symbol 44 . 46) (USING 22 . 27) (USING 22 . 27) (USING 22 . 27) (USING 22 . 27) (USING 22 . 27) (symbol 22 . 25) (symbol 22 . 24) (symbol 22 . 23) (symbol 22 . 24) (symbol 22 . 24) (symbol 22 . 24) (symbol 11 . 19) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 18) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 17) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 16) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 15) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 14) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 11 . 13) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (punctuation 10 . 11) (symbol 2 . 9) (punctuation 1 . 2) (symbol 2 . 9) (punctuation 1 . 2) (symbol 2 . 8) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2))
+    )
+   (semanticdb-table "CThread.h"
+    :major-mode 'c-mode
+    :tags nil
+    :file "CThread.h"
+    :pointmax 14
+    :unmatched-syntax '((symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 15) (CLASS 1 . 6) (symbol 7 . 17) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 14) (CLASS 1 . 6) (symbol 7 . 13) (CLASS 1 . 6) (symbol 7 . 12) (CLASS 1 . 6) (symbol 7 . 11) (CLASS 1 . 6) (symbol 7 . 10) (CLASS 1 . 6) (symbol 7 . 9) (CLASS 1 . 6) (CLASS 1 . 6) (symbol 1 . 5) (symbol 1 . 4) (symbol 1 . 3))
+    )
+   )
+  :file "!home!jason!Documents!misc!threadpoll!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,20 @@
+#include <iostream>
+
+int gcd(int m, int n)
+{
+    if (n == 0) 
+        return m;
+    return gcd(n, m % n);
+}
+    
+
+int main(int argc, char *argv[])
+{
+    int m, n;
+    cout << "please input m = " << endl;
+    cin >> m;
+    cout << "please input n = " << endl;
+    cin >> n;
+    gcd(m, n);
+    return 0;
+}

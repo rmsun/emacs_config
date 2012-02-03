@@ -1,0 +1,44 @@
+#include <stdlib.h>
+#include "stack.h"
+#include "item.h"
+
+typedef struct stackNode* link;
+struct stackNode
+{
+     Item item;
+     link next;
+}
+static link head;
+
+link new(Item item, link next)
+{
+     link x = malloc(sizeof *x);
+     x->item = item;
+     x->next = next;
+     return x;
+}
+
+void stackInit(int maxN)
+{
+     head = NULL;
+}
+
+int stackEmpty()
+{
+     return head == NULL;
+}
+
+void stackPush(Item item)
+{
+     head = new(item, head);
+}
+
+Item stackPop()
+{
+     Item item = head->item;
+     link t = head->next;
+     free(head);
+     head = t;
+     return item;
+}
+

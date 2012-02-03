@@ -1,0 +1,30 @@
+;; Object Documents/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Documents/"
+  :tables (list 
+   (semanticdb-table "io_buffer.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("unistd.h" include (:system-flag t) nil [20 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [49 58])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [59 72]))                  
+                :type "int")
+                nil [40 276]))          
+    :file "io_buffer.c"
+    :pointmax 277
+    :fsize 276
+    :lastmodtime '(20133 18037)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

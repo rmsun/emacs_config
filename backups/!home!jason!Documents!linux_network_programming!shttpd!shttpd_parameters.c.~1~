@@ -1,0 +1,24 @@
+/***********************************************
+Describe: this program is a very simple example
+          of http server
+Date: Nov 14, 2011
+ ***********************************************/
+
+#include "shttpd.h"
+
+static char *l_opt_arg;
+static char *shortopts = "c:d:f:ho:l:m:t:";
+static struct option longopts[] = {
+     {"CGIRoot",        required_argument, NULL, 'c'},
+     {"ConfigFile",     required_argument, NULL, 'f'},
+     {"DefaultFile",    required_argument, NULL, 'd'},
+     {"DocumentRoot",   required_argument, NULL, 'o'},
+     {"ListenPort",     required_argument, NULL, 'l'},
+     {"MaxClient",      required_argument, NULL, 'm'},
+     {"TimeOut",        required_argument, NULL, 't'},
+     {"Help",           no_argument,       NULL, 'h'},
+     {0, 0, 0, 0},
+};
+   
+     
+          

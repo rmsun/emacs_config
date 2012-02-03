@@ -1,0 +1,24 @@
+/***********************************************
+Describe: this program is a very simple example
+          of http server
+Date: Nov 14, 2011
+ ***********************************************/
+
+#ifndef __SHTTPD_H__
+#define __SHTTPD_H__
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <sys/types.h>           /*primitive system data types*/
+#include <sys/stat.h>            /*file status*/
+#include <sys/socket.h>          /*sockets interface*/
+#include <sys/wait.h>            /*process control*/
+#include <sys/times.h>           /*process times*/
+#include <netinet/in.h>          /*Internet address family*/
+#include <netdb.h>               /*network database operations*/
+#include <pthread.h>             /*threads*/
+#include <arpa/inet.h>           /*Internet definitions*/
+#include <signal.h>              /*signals*/
+#include <errno.h>               /*error codes*/
+#include <unistd.h>              /*symbolic constants*/

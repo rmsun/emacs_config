@@ -1,0 +1,23 @@
+;; for ibus input method
+;;Archlinux uses Python 3, so add this to your (custom-set-varibles):
+(add-to-list 'load-path "~/.emacs.d/plugins/ibus")
+(setq ibus-agent-file-name "~/.emacs.d/plugins/ibus/ibus-el-agent")
+(setq ibus-python-shell-command-name "python2")
+;;(require 'ibus)
+;; Use C-SPC for Set Mark command
+(ibus-define-common-key ?\C-\s nil)
+;; Turn on ibus-mode automatically after loading .emacs
+(add-hook 'after-init-hook 'ibus-mode-on) ;
+;; Choose your key to toggle input status:
+;;(global-set-key (kbd "C-\\") 'ibus-toggle)
+
+;; ;;; Or if you use emacsclient, replace init-hook line by these:
+;; (add-hook 'after-make-frame-functions
+;;           (lambda (new-frame)
+;;             (select-frame new-frame)
+;;             (ibus-mode-on)))
+;;注意：
+;;1.在.Xresources 中添加：
+;;Emaxs.UseXIM: false
+;;然后执行 xrdb .Xresources
+;;2.在emacs daemon的命令行前加：LC_CTYPE=zh_CN.UTF-8

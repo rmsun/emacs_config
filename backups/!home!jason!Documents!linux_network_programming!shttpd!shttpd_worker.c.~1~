@@ -1,0 +1,33 @@
+/***********************************************
+Describe: this program is a very simple example
+          of http server
+Date: Nov 14, 2011
+ ***********************************************/
+
+#include "shttpd.h"
+
+static int workersnum = 0;        /*工作线程数量*/
+static struct worker_ctl *wctl = NULL;    /*线程选项？*/
+extern struct conf_opts conf_para;
+pthread_mutex_t thread_init = PTHREAD_MUTEX_INITIALIZER;    /*互斥量初始值*/
+static int WORKER_ISSTATUS(int status);
+static void Worker_Init();
+static int Worker_Add(int i);
+static void Worker_Delete(int i);
+static void Worker_Destory();
+
+static void do_work(struct worker_ctl *wctl)
+{
+     DBGPRINT("==>do_work\n");
+     struct timeval tv;        /*超时时间*/
+     fd_set rfds;              /*读文件集*/
+     int fd = wctl->conn.cs;   /*客户端的套接字描述符*/
+     struct vec *req = &wctl->conn.con_req.req;    /*请求缓冲区向量*/
+     
+     int retval = 1;
+     
+     for ( ; retval > 0; )
+     {
+          FD_ZERO(&rfds);    /*清空读文件集，将客户端套接字描述符放入读文件集*/
+          FD_SET(fd, &rfds);
+          

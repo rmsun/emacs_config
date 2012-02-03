@@ -1,0 +1,12 @@
+;; Object test-project
+;; EDE project file.
+(ede-proj-project "test-project"
+  :name "test-project"
+  :file "Project.ede"
+  :targets (list 
+   (ede-proj-target-makefile-program "test.h"
+    :name "test.h"
+    :path ""
+    )
+   )
+  )

@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node *ptr;
+struct Node
+{
+     int a;
+     int b;
+     ptr pointer;
+};
+
+int main(int argc, char *argv[])
+{
+     ptr p1;
+     p1 = malloc(sizeof(*p1));
+     p1->a = 1;
+     p1->b = 2;
+     p1->pointer = NULL;
+     printf("a=%d b=%d", p1->a, p1->b);
+     free(p1);
+     
+     return 0;
+}
+
+     

@@ -1,0 +1,519 @@
+;; Object algorithms_in_c/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "algorithms_in_c/"
+  :tables (list 
+   (semanticdb-table "josephus_problem.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("link" type
+               (:typedef ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "node"
+                :type "typedef")
+                nil [41 68])
+            ("node" type
+               (:members 
+                  ( ("item" variable (:type "int") (reparse-symbol classsubparts) [89 98])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [104 114]))                  
+                :type "struct")
+                nil [69 117])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [128 137])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [138 151]))                  
+                :type "int")
+                nil [119 619]))          
+    :file "josephus_problem.c"
+    :pointmax 620
+    :fsize 619
+    :lastmodtime '(20120 17935)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "list.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("itemType" variable (:constant-flag t) nil [9 17])
+            ("link" type
+               (:typedef ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "node"
+                :type "typedef")
+                nil [45 71])
+            ("node" type
+               (:members 
+                  ( ("item" variable (:type "int") (reparse-symbol classsubparts) [100 105])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [111 121]))                  
+                :type "struct")
+                nil [72 124])
+            ("Node" type
+               (:typedef ("link" type (:type "class") nil nil)
+                :superclasses "link"
+                :type "typedef")
+                nil [125 143])
+            ("initNodes" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [159 163]))                  
+                :type "void")
+                nil [144 164])
+            ("newNode" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [178 182]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [165 183])
+            ("freeNode" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [198 203]))                  
+                :type "void")
+                nil [184 204])
+            ("insertNext" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [221 226])
+                    ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [227 232]))                  
+                :type "void")
+                nil [205 233])
+            ("deleteNext" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [250 255]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [234 256])
+            ("Next" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [267 272]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [257 273])
+            ("Item" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [283 288]))                  
+                :type "int")
+                nil [274 289]))          
+    :file "list.h"
+    :pointmax 291
+    :fsize 289
+    :lastmodtime '(20121 28319)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("itemType" . ((INT "int" 18 . 21) (punctuation ";" 21 . 22)))
+          )
+
+    )
+   (semanticdb-table "list.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("list.h" include nil nil [21 38])
+            ("freelist" variable (:type ("link" type (:type "class") nil nil)) nil [39 53])
+            ("initNodes" function
+               (:arguments 
+                  ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [70 76]))                  
+                :type "void")
+                nil [55 262])
+            ("newNode" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [277 283]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [264 374])
+            ("freeNode" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [390 397]))                  
+                :type "void")
+                nil [376 431])
+            ("insertNext" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [449 456])
+                    ("t" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [457 464]))                  
+                :type "void")
+                nil [433 510])
+            ("deleteNext" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [528 535]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [512 601])
+            ("Next" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [613 620]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [603 645])
+            ("Item" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [656 663]))                  
+                :type "int")
+                nil [647 688]))          
+    :file "list.c"
+    :pointmax 688
+    :fsize 688
+    :lastmodtime '(20121 28403)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "josephus_problem1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("list.h" include nil nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [48 57])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58 71]))                  
+                :type "int")
+                nil [39 479]))          
+    :file "josephus_problem1.c"
+    :pointmax 480
+    :fsize 479
+    :lastmodtime '(20121 29976)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "string_search.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("N" variable (:constant-flag t) nil [28 29])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [46 55])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56 69]))                  
+                :type "int")
+                nil [37 484]))          
+    :file "string_search.c"
+    :pointmax 485
+    :fsize 484
+    :lastmodtime '(20124 4832)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("N" . ((number "10000" 30 . 35)))
+          )
+
+    )
+   (semanticdb-table "string_sort.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("Nmax" variable (:constant-flag t) nil [69 73])
+            ("Mmax" variable (:constant-flag t) nil [88 92])
+            ("buf" variable
+               (:dereference 1
+                :type "char")
+                nil [100 115])
+            ("M" variable (:type "int") nil [116 126])
+            ("compare" function
+               (:arguments 
+                  ( ("i" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [140 148])
+                    ("j" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [149 157]))                  
+                :type "int")
+                nil [128 207])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [218 227])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [228 241]))                  
+                :type "int")
+                nil [209 569]))          
+    :file "string_sort.c"
+    :pointmax 570
+    :fsize 569
+    :lastmodtime '(20124 9824)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("Mmax" . ((number "10000" 93 . 98)))
+          ("Nmax" . ((number "1000" 74 . 78)))
+          )
+
+    )
+   (semanticdb-table "adjacency_matrix.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("V" variable (:constant-flag t) nil [48 49])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [62 71])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [72 85]))                  
+                :type "int")
+                nil [53 538]))          
+    :file "adjacency_matrix.c"
+    :pointmax 526
+    :fsize 538
+    :lastmodtime '(20125 6954)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("V" . ((number "8" 50 . 51)))
+          )
+
+    )
+   (semanticdb-table "adjacency-lists.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("V" variable (:constant-flag t) nil [48 49])
+            ("link" type
+               (:typedef ("node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "node"
+                :type "typedef")
+                nil [52 78])
+            ("node" type
+               (:members 
+                  ( ("v" variable (:type "int") (reparse-symbol classsubparts) [98 104])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [110 120]))                  
+                :type "struct")
+                nil [79 123])
+            ("NEW" function
+               (:arguments 
+                  ( ("v" variable (:type "int") (reparse-symbol arg-sub-list) [133 139])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [140 150]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [124 239])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [250 259])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [260 273]))                  
+                :type "int")
+                nil [241 684]))          
+    :file "adjacency-lists.c"
+    :pointmax 692
+    :fsize 691
+    :lastmodtime '(20125 8594)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("V" . ((number "8" 50 . 51)))
+          )
+
+    )
+   (semanticdb-table "closet_point1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("math.h" include (:system-flag t) nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("stdlib.h" include (:system-flag t) nil [38 57])
+            ("point" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("x" variable (:type "float") (reparse-symbol classsubparts) [82 90])
+                          ("y" variable (:type "float") (reparse-symbol classsubparts) [96 104]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [59 112])
+            ("distance" function
+               (:arguments 
+                  ( ("a" variable (:type ("point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [129 137])
+                    ("b" variable (:type ("point" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [138 146]))                  
+                :type "float")
+                nil [114 226])
+            ("randFloat" function (:type "float") nil [228 282])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [293 302])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [303 316]))                  
+                :type "int")
+                nil [284 775]))          
+    :file "closet_point1.c"
+    :pointmax 783
+    :fsize 775
+    :lastmodtime '(20125 15146)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "closet_point2.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "closet_point2.c"
+    :pointmax 431
+    :fsize 1190
+    :lastmodtime '(20126 21875)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "getchar.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 168]))          
+    :file "getchar.c"
+    :pointmax 169
+    :fsize 168
+    :lastmodtime '(20126 48766)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mylist.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("item" variable (:constant-flag t) nil [48 52])
+            ("A" variable (:constant-flag t) nil [65 66])
+            ("B" variable (:constant-flag t) nil [80 81])
+            ("link" type
+               (:typedef ("Node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "Node"
+                :type "typedef")
+                nil [87 113])
+            ("Node" type
+               (:members 
+                  ( ("v" variable (:type "int") (reparse-symbol classsubparts) [133 140])
+                    ("next" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol classsubparts) [146 156]))                  
+                :type "struct")
+                nil [114 159])
+            ("listInit" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [175 181]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [161 561])
+            ("traversalList" function
+               (:arguments 
+                  ( ("t" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 589]))                  
+                :type "void")
+                nil [563 684])
+            ("insert" function
+               (:arguments 
+                  ( ("p" variable (:type "int") (reparse-symbol arg-sub-list) [698 704])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [705 712])
+                    ("k" variable (:type "int") (reparse-symbol arg-sub-list) [713 720])
+                    ("t" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [721 728]))                  
+                :type "void")
+                nil [686 1159])
+            ("deleteItem" function
+               (:arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1177 1184])
+                    ("t" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1185 1192]))                  
+                :type "void")
+                nil [1161 1347])
+            ("reverse" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1362 1369]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [1349 1534])
+            ("findLast" function
+               (:arguments 
+                  ( ("x" variable (:type ("link" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1550 1557]))                  
+                :type ("link" type (:type "class") nil nil))
+                nil [1536 1818])
+            ("t" variable (:type "int") nil [1643 1645])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1829 1838])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1839 1852]))                  
+                :type "int")
+                nil [1820 3152]))          
+    :file "mylist.c"
+    :pointmax 3172
+    :fsize 3222
+    :lastmodtime '(20130 32980)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("item" . ((INT "int" 53 . 56)))
+          ("A" . ((number "1" 70 . 71)))
+          ("B" . ((number "0" 85 . 86)))
+          )
+
+    )
+   (semanticdb-table "struct_free.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("ptr" type
+               (:typedef ("Node" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :superclasses "Node"
+                :type "typedef")
+                nil [41 66])
+            ("Node" type
+               (:members 
+                  ( ("a" variable (:type "int") (reparse-symbol classsubparts) [86 92])
+                    ("b" variable (:type "int") (reparse-symbol classsubparts) [98 104])
+                    ("pointer" variable (:type ("ptr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [110 122]))                  
+                :type "struct")
+                nil [67 125])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [136 145])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [146 159]))                  
+                :type "int")
+                nil [127 354]))          
+    :file "struct_free.c"
+    :pointmax 365
+    :fsize 361
+    :lastmodtime '(20129 9218)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!algorithms_in_c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

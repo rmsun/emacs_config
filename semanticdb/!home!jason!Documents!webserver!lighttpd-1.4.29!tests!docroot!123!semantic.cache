@@ -1,0 +1,19 @@
+;; Object 123/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "123/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("12345.html" "12345.txt" "dummyfile.bla" "phpinfo.php")) nil [1 59]))          
+    :file "Makefile.am"
+    :pointmax 59
+    :fsize 58
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!tests!docroot!123!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

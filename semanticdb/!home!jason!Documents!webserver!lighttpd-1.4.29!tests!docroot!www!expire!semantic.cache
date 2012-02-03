@@ -1,0 +1,19 @@
+;; Object expire/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "expire/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("access.txt" "modification.txt")) nil [1 40]))          
+    :file "Makefile.am"
+    :pointmax 40
+    :fsize 39
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!tests!docroot!www!expire!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,51 @@
+/******************************************************
+Describe: a client program ask server for current time
+Auther: sun
+Date: Oct 28, 2011
+*******************************************************/
+#include <sys/types.h>                            /*基本系统数据类型*/
+#include <sys/socket.h>                           /*套接字接口*/
+#include <netinet/in.h>                           /*Internet地址族*/
+#include <arpa/inet.h>                            /*Internet定义*/
+#include <time.h>                           
+#include <string.h>
+#include <stdio.h>
+#include "error.h"
+
+#define BUFFLEN 1024
+#define SERVER_PORT 8888
+
+int main(int argc, char* argv[])
+{
+     int sockfd;
+     struct sockaddr_in servaddr;
+     time_t now;
+     char buff[BUFFLEN];
+     int n = 0;
+     int len = 0;
+     
+     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
+          err_sys("socket error");
+     
+     memset(&servaddr, 0, sizeof(servaddr));
+     servaddr.sin_family = AF_INET;
+     servaddr.sin_port = htons(SERVER_PORT);
+     if ((inetpton(AF_INET, argv[1], &servaddr.sin_addr)) < 0)   /*将字符串类型的ip地址转换为二进制类型*/
+          err_sys("inetpton error");
+     
+     memset(buff, 0, BUFFLEN);
+     strcpy(buff, "TIME");
+     
+     sendto(sockfd, buff, strlen(buff), 0, (struct sockaddr*)&servaddr, sizeof(servaddr));
+     memset(buff, 0, BUFFLEN);
+     
+     len = sizeof(servaddr);
+     n = recvfrom(sockfd, buff, BUFFLEN, 0, (struct sockaddr*)&servaddr, &len);  /*注意len传的是指针*/
+     
+     if (n > 0)
+          printf("TIME:%s", buff);
+     close(sockfd);
+     return 0;
+}
+
+         

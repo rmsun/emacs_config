@@ -1,0 +1,13 @@
+#include <stdio>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int a, b;
+    cin >> a >> b;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << end;
+    
+    return 0;
+}

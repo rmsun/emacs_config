@@ -1,0 +1,139 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define item int
+#define A    1
+#define B    0
+typedef struct Node *link;
+struct Node
+{
+     item v;
+     link next;
+};
+
+link listInit(int n)
+{
+     int i;
+     link head, t = malloc(sizeof(*t));
+     head = t;
+     
+     /* link t = malloc(n*sizeof(*t));
+     for (i = 0; i < n-1; i++)
+     {
+          t[i].next = &(t[i+1]);
+     }
+     t[n-1].next = NULL;*/
+     for (i = 0; i < n-1; i++)
+     {
+          t->next = malloc(sizeof(*t));
+          t = t->next;
+     }
+     t->next = NULL;
+          
+     return head;
+}
+
+void traversalList(link t)
+{
+     while (t != NULL)
+     {
+          printf("%d ", t->v);
+          t = t->next;
+     }
+}
+
+void insert(int p, item n, item k, link t)
+{
+     link r, m;
+     m = malloc(sizeof(*m));
+     m->v = k;
+    
+     while (t->v != n)
+     {
+          t = t->next;
+     }
+     /*这时t指向n所在结点*/
+     if (p == 1)   /*在n后insert*/
+     {
+          m->next = t->next;
+          t->next = m;
+     }
+     else
+     {
+          //r = (--t)->next; /*--t指向n的上一个结点*/
+          // m->next = r;
+          // t->next = m;
+          m->next = t;
+          (--t)->next = m;
+          
+     }
+}
+
+void deleteItem(item n, link t) 
+{
+     link tmp;
+     
+     while (t->v != n)
+     {
+          t = t->next;
+     }
+     tmp = t->next;
+     t->next = t->next->next;
+     free(tmp);   
+}
+
+link reverse(link x)
+{
+     link r = NULL, t, y = x;
+     while(y != NULL)
+     {
+          t = y->next;
+          y->next = r;
+          r = y;
+          y = t;
+     }
+     return r;
+}
+
+int main(int argc, char *argv[])
+{
+     int n, k, i = 0;
+     link x, t;
+ 
+     printf("please input the number of nodes:");
+     scanf("%d", &n);
+     x = listInit(n); 
+     for (t = x; t != NULL; t = t->next)
+     {
+          t->v = i;
+          i++;
+     }
+     i = 0;
+     printf("\nlist the node:");
+     for (t = x; t != NULL; t = t->next)
+          printf("%d ", t->v);
+     printf("\nplease input the number you want to insert after: ");
+     scanf("%d", &n);
+     printf("\nplease input number of the node: ");
+     scanf("%d", &k);
+     insert(A, n, k, x);
+     printf("\nafter insert: ");
+     for (t = x; t != NULL; t = t->next)
+          printf ("%d ", t->v);
+
+     printf("\nplease input the number you want to delete after: ");\
+     scanf("%d", &n);
+     deleteItem(n, x);
+     printf("\nafter delete: ");
+     for (t = x; t != NULL; t = t->next)
+          printf ("%d ", t->v);
+     printf("\nafter reverse: ");
+     for (t = reverse(x); t != NULL; t = t->next)
+          printf ("%d ", t->v);
+     printf("\n");
+     
+     return 0;
+}
+
+     
+     
+     

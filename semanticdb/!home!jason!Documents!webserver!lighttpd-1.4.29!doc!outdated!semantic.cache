@@ -1,0 +1,24 @@
+;; Object outdated/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "outdated/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("DOCS" variable (:default-value ("accesslog.txt" "authentication.txt" "cgi.txt" "compress.txt" "configuration.txt" "extforward.txt" "fastcgi-state.txt" "fastcgi.txt" "features.txt" "performance.txt" "plugins.txt" "proxy.txt" "redirect.txt" "rewrite.txt" "secdownload.txt" "security.txt" "simple-vhost.txt" "skeleton.txt" "ssi.txt" "ssl.txt" "state.txt" "rrdtool.txt" "alias.txt" "userdir.txt" "mysqlvhost.txt" "access.txt" "traffic-shaping.txt" "setenv.txt" "status.txt" "scgi.txt" "cml.txt" "trigger_b4_dl.txt" "webdav.txt" "expire.txt" "dirlisting.txt" "evhost.txt" "magnet.txt")) nil [1 552])
+            ("HTMLDOCS" variable (:default-value ("accesslog.html" "authentication.html" "cgi.html" "compress.html" "configuration.html" "extforward.html" "fastcgi-state.html" "fastcgi.html" "features.html" "performance.html" "plugins.html" "proxy.html" "redirect.html" "rewrite.html" "secdownload.html" "security.html" "simple-vhost.html" "skeleton.html" "ssi.html" "ssl.html" "state.html" "rrdtool.html" "alias.html" "userdir.html" "mysqlvhost.html" "access.html" "traffic-shaping.html" "setenv.html" "status.html" "scgi.html" "cml.html" "trigger_b4_dl.html" "webdav.html" "expire.html" "dirlisting.html" "evhost.html" "magnet.html")) nil [553 1217])
+            ("EXTRA_DIST" variable (:default-value ("state.dot" "fastcgi-state.dot" "$(DOCS)")) nil [1218 1272])
+            (".txt.html" function nil nil [1273 1302])
+            ("html-local" function (:arguments ("$(HTMLDOCS)")) nil [1304 1328])
+            ("clean-local" function nil nil [1389 1416]))          
+    :file "Makefile.am"
+    :pointmax 1418
+    :fsize 1417
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!doc!outdated!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

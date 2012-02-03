@@ -1,0 +1,50 @@
+#include    <stdlib.h>
+#include    "item.h"
+#include    "fifo_queue.h"
+
+typedef struct queueNode* link;
+struct queueNode
+{
+     Item item;
+     link next;
+};
+stacic link head, tail;
+
+link new(Item item, link next)
+{
+     link x = malloc(sizeof *x);
+     x->item = item;
+     x->next = next;
+     return x;
+}
+
+void queueInit(int maxN)
+{
+     head = NULL;
+}
+
+int queueEmpty()
+{
+     return head == NULL;
+}
+
+void queuePut(Item item)
+{
+     if (head == NULL)
+     {
+          head = (tail = new(item, head));
+          return;
+     }
+     tail->next = new(item, tail->next);
+     tail->tail->next;
+}
+
+Item queueGet()
+{
+     Item item = head->item;
+     link t = head->next;
+     free(head);
+     head = t;
+     return item;
+}
+

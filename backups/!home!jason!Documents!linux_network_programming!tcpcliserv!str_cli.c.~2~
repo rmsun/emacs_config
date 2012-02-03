@@ -1,0 +1,26 @@
+#include "../lib/unp.h"
+
+char *Fgets(char *ptr, int n, FILE *stream)
+{
+     char *rptr;
+     if ((rptr = fgets(ptr, n, stream)) == NULL && ferror(stream))
+          err_sys("fgets error");
+     return(rptr);
+}
+
+void str_cli(FILE *fp, int sockfd)
+{
+     char sendline[MAXLINE], recvline[MAXLINE];
+     int n;
+     
+     while (Fgets(sendline, MAXLINE, fp) != NULL)
+     {
+          if (write(sockfd, sendline, strlen(sendline)) != strlen(sendline))
+               err_sys("write error");
+          if ((n = read(sockfd, recvline, MAXLINE)) < 0)
+               err_sys("read from socket error");
+          recvline[n] = '\0';
+          if (fputs(recvline, stdout) == EOF)
+               err_sys("fputs error");
+     }
+}

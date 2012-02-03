@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+void max_heapify(int *a, int i, int size)
+{
+    int l = 2 * i;      //left child
+    int r = 2 * i + 1;  //right child
+    int largest;
+    
+    if (l < size && *(a+(l-1)) > *(a+(i-1)))
+        largest = l;
+    else
+        largest = i;
+    if (r < size && *(a+(r-1)) > *(a+(largest-1)))
+        largest = r;
+    if (largest != i)
+    {
+        int tmp = *(a+(i-1));
+        *(a+(i-1)) = *(a+(largest-1));
+        *(a+(largest-1)) = tmp;
+        max_heapify(a, largest, size);
+    }
+    
+}
+
+void build_max_heap(int *a, int size)
+{
+    for (int i = size/2; i >= 0; i--)
+        max_heapify(a, i+1, size);
+}
+
+void heap_sort(int *a, int size)
+{
+    build_max_heap(a, size);
+    
+    for (int i = size; i > 1; i++)
+    {
+        int tmp = *(a+(size-1));
+        *(a+(size-1)) = *a;
+        *a = tmp;
+        max_heapify(a, i, size);
+    }
+    
+int main(int argc, char *argv[])
+{
+    int n;
+
+    cout << "please input the number of array: " << endl;
+    cin >> n;
+    int *a = (int *)malloc(n*sizeof(int));
+    
+    return 0;
+}
+

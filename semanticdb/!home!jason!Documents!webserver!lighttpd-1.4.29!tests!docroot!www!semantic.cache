@@ -1,0 +1,20 @@
+;; Object www/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "www/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("cgi.php" "cgi.pl" "index.html" "index.txt" "phpinfo.php" "redirect.php" "cgi-pathinfo.pl" "get-env.php" "get-server-env.php" "nph-status.pl" "prefix.fcgi" "get-header.pl" "ssi.shtml" "get-post-len.pl" "exec-date.shtml" "404.fcgi" "404.html" "404.pl" "send404.pl" "crlfcrash.pl" "sendfile.php")) nil [1 282])
+            ("SUBDIRS" variable (:default-value ("go" "indexfile" "expire")) nil [282 310]))          
+    :file "Makefile.am"
+    :pointmax 310
+    :fsize 309
+    :lastmodtime '(20180 54330)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!webserver!lighttpd-1.4.29!tests!docroot!www!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

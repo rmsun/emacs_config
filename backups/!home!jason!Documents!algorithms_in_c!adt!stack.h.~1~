@@ -1,0 +1,4 @@
+void stackInit(int);
+int stackEmpty();
+void stackPush(Item);
+Item stackPop();

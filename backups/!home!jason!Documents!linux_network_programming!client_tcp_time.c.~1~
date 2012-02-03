@@ -1,0 +1,41 @@
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <string.h>
+#include <stdio.h>
+#include "error.h"
+
+#define BUFFLEN 1024
+#define SERVER_PORT 8888
+
+int main(int argc, char *argv[])
+{
+     int sockfd;
+     struct sockaddr_in servaddr;
+     char buff[BUFFLEN];
+     int n = 0;
+     
+     if ((sockfd = sock(AF_INET, SOCK_STREAM, 0)) < 0)
+          err_sys("socket error");
+     
+     memset(&servaddr, 0, sizeof(servaddr));
+     servaddr.sin_family = AF_INET;
+     servaddr.sin_port = htons(SERVER_PORT);
+     inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
+     
+     if (connet(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr)) < 0)
+          err_sys("connect error");
+     
+     memset(buff, 0, BUFFLEN);
+     strcpy(buff, "TIME");
+     
+     send(sockfd, buff, strlen(buff), 0);
+     memset(buff, 0, BUFFLEN);
+     
+     n = recv(sockfd, buff, BUFFLEN, 0);
+     if (n > 0)
+          printf("\nTIME:%s", buff);
+     close(sockfd);
+     
+     return 0;
+}

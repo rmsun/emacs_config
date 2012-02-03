@@ -1,0 +1,234 @@
+;; Object et/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "et/"
+  :tables (list 
+   (semanticdb-table "com_err.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("COM_ERR_ATTR" variable (:constant-flag t) nil [344 356])
+            ("stddef.h" include (:system-flag t) nil [415 434])
+            ("stdarg.h" include (:system-flag t) nil [435 454])
+            ("errcode_t" type
+               (:typedef ("long")
+                :superclasses "long"
+                :type "typedef")
+                nil [456 479])
+            ("error_table" type
+               (:members 
+                  ( ("msgs" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol classsubparts) [503 529])
+                    ("base" variable (:type "long") (reparse-symbol classsubparts) [531 541])
+                    ("n_msgs" variable (:type "int") (reparse-symbol classsubparts) [543 554]))                  
+                :type "struct")
+                nil [481 557])
+            ("et_list" type
+               (:prototype t
+                :type "struct")
+                nil [558 573])
+            ("com_err" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [596 609])
+                    ("" variable (:type "long") (reparse-symbol arg-sub-list) [610 615])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [616 629])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [630 634]))                  
+                :type "void")
+                nil [575 673])
+            ("com_err_va" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("whoami" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [699 718])
+                    ("code" variable (:type ("errcode_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [719 734])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [735 751])
+                    ("args" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [755 768]))                  
+                :type "void")
+                nil [675 807])
+            ("error_message" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "long") (reparse-symbol arg-sub-list) [843 848]))                  
+                :type "char")
+                nil [809 849])
+            ("com_err_hook" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [850 922])
+            ("init_error_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("msgs" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1184 1209])
+                    ("base" variable (:type "long") (reparse-symbol arg-sub-list) [1210 1220])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [1221 1231]))                  
+                :type "int")
+                nil [1156 1232])
+            ("add_error_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("et" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("error_table" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1267 1297]))                  
+                :type ("errcode_t" type (:type "class") nil nil))
+                nil [1234 1298])
+            ("remove_error_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("et" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("error_table" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1335 1365]))                  
+                :type ("errcode_t" type (:type "class") nil nil))
+                nil [1299 1366])
+            ("add_to_error_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("new_table" variable
+                       (:pointer 1
+                        :type ("et_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1398 1424]))                  
+                :type "void")
+                nil [1367 1425])
+            ("com_right" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :constant-flag t
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("et_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1498 1519])
+                    ("code" variable (:type "long") (reparse-symbol arg-sub-list) [1520 1530]))                  
+                :type "char")
+                nil [1469 1531])
+            ("com_right_r" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :constant-flag t
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("et_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1563 1584])
+                    ("code" variable (:type "long") (reparse-symbol arg-sub-list) [1585 1595])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1596 1606])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1607 1618]))                  
+                :type "char")
+                nil [1532 1619])
+            ("initialize_error_table_r" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 2
+                        :type ("et_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1657 1679])
+                    ("messages" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1689 1711])
+                    ("num_errors" variable (:type "int") (reparse-symbol arg-sub-list) [1721 1736])
+                    ("base" variable (:type "long") (reparse-symbol arg-sub-list) [1746 1756]))                  
+                :type "void")
+                nil [1620 1757])
+            ("free_error_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("et" variable
+                       (:pointer 1
+                        :type ("et_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1787 1806]))                  
+                :type "void")
+                nil [1758 1807])
+            ("et_list_lock" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1895 1900]))                  
+                :type "int")
+                nil [1871 1901])
+            ("et_list_unlock" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1928 1933]))                  
+                :type "int")
+                nil [1902 1934])
+            ("__COM_ERR_H" variable (:constant-flag t) nil [1944 1955])
+            ("__COM_ERR_H__" variable (:constant-flag t) nil [1964 1977]))          
+    :file "com_err.h"
+    :pointmax 2039
+    :fsize 2038
+    :lastmodtime '(20147 1007)
+    :unmatched-syntax '((punctuation 1154 . 1155) (semantic-list 1104 . 1154) (semantic-list 1075 . 1103) (VOID 1070 . 1074) (EXTERN 1063 . 1069) (punctuation 1061 . 1062) (semantic-list 1018 . 1061) (semantic-list 935 . 1016) (VOID 930 . 934) (EXTERN 923 . 929))
+    :lexical-table 
+        '(("__COM_ERR_H")
+          ("__COM_ERR_H__")
+          ("COM_ERR_ATTR" (spp-arg-list ("x") 356 . 359) . ((symbol "__attribute__" 360 . 373) (semantic-list "(x)" 373 . 376)))
+          )
+
+    )
+   )
+  :file "!usr!include!et!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

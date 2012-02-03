@@ -1,0 +1,20 @@
+#include    "fifo_queue.h"
+
+#define N 10
+
+int main(int argc, char *argv[])
+{
+     int i;
+     queueInit(N);
+     for (i = 0; i < N; i++)
+          queuePut(i);
+     if (!queueEmpty)
+          printf("queue is not empty\n");
+     for (i = 0; i < N; i++)
+          printf("the queue is %d ", queueGet());
+     if (queueEmpty())
+          printf("\nyes,the queue is empty\n");
+     
+     return 0;
+}
+

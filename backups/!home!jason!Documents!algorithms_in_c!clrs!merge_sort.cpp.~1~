@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+#define MAX_VALUE 10000  //设置哨兵
+
+void
+merge(int *a, int p, int q, int r)
+{
+    int num1, num2;
+    num1 = q - p +1;
+    num2 = r - q;
+    int *left = (int *)malloc((num1+1)*sizeof(int));
+    int *right = (int *)malloc((num2+1)*sizeof(int));
+    
+    for (int i = 0; i < num1; i++)
+        *(left+i) = *(a+p+i);
+    *(left+i) = MAX_VALUE;
+ 
+    for (int i = 0; i < num2; i++)
+        *(right+i) = *(a+q+1+i);
+    *(right+i) = MAX_VALUE;
+    
+    int index1 = 0;
+    int index2 = 0;
+    for (int i = p; i <= r; i++)
+    {
+        if (*(a1+index1) < *(a2+index2))
+        {
+            *(a+i) = *(a1+index1);
+            index1++;
+        }
+        else
+        {
+            *(a+i) = *(a2+index2);
+            index2++;
+        }
+    }
+    free(a1);
+    free(a2);
+}
+
+            

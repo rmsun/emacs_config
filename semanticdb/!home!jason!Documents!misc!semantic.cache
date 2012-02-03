@@ -1,0 +1,326 @@
+;; Object misc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "misc/"
+  :tables (list 
+   (semanticdb-table "iotest1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 174]))          
+    :file "iotest1.c"
+    :pointmax 179
+    :fsize 174
+    :lastmodtime '(20134 49083)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "iotest2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 198]))          
+    :file "iotest2.c"
+    :pointmax 195
+    :fsize 198
+    :lastmodtime '(20134 49173)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [22 42])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [53 62])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [63 76]))                  
+                :type "int")
+                nil [44 198]))          
+    :file "test.cpp"
+    :pointmax 199
+    :fsize 198
+    :lastmodtime '(20135 60661)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "thread_test1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("NLOOP" variable (:constant-flag t) nil [70 75])
+            ("counter" variable (:type "int") nil [81 93])
+            ("mutex" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [94 144])
+            ("thr_fn" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [160 170]))                  
+                :type "void")
+                nil [147 485])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [496 505])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [506 519]))                  
+                :type "int")
+                nil [487 753]))          
+    :file "thread_test1.c"
+    :pointmax 626
+    :fsize 754
+    :lastmodtime '(20147 33059)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NLOOP" . ((number "5000" 76 . 80)))
+          )
+
+    )
+   (semanticdb-table "producer_and_customer.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("msg" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [80 97])
+                    ("num" variable (:type "int") (reparse-symbol classsubparts) [103 111]))                  
+                :type "struct")
+                nil [62 114])
+            ("head" variable
+               (:pointer 1
+                :type ("msg" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [115 139])
+            ("has_product" variable (:type ("pthread_cond_t" type (:type "class") nil nil)) nil [140 194])
+            ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [195 244])
+            ("consumer" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [261 271]))                  
+                :type "void")
+                nil [246 670])
+            ("producer" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [687 697]))                  
+                :type "void")
+                nil [672 1112])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1123 1132])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1133 1146]))                  
+                :type "int")
+                nil [1114 1384]))          
+    :file "producer_and_customer.c"
+    :pointmax 1387
+    :fsize 1386
+    :lastmodtime '(20147 52152)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "semaphore.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("semaphore.h" include (:system-flag t) nil [61 83])
+            ("NUM" variable (:constant-flag t) nil [93 96])
+            ("queue" variable
+               (:dereference 1
+                :type "int")
+                nil [100 115])
+            ("product_number" variable (:type ("sem_t" type (:type "class") nil nil)) nil [116 151])
+            ("blank_number" variable (:type ("sem_t" type (:type "class") nil nil)) nil [116 151])
+            ("producer" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [168 178]))                  
+                :type "void")
+                nil [153 435])
+            ("consumer" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [452 462]))                  
+                :type "void")
+                nil [437 704])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [715 724])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [725 738]))                  
+                :type "int")
+                nil [706 1096]))          
+    :file "semaphore.c"
+    :pointmax 1097
+    :fsize 1096
+    :lastmodtime '(20147 51532)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("NUM" . ((number "5" 97 . 98)))
+          )
+
+    )
+   (semanticdb-table "hello.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 180]))          
+    :file "hello.c"
+    :pointmax 158
+    :fsize 180
+    :lastmodtime '(20237 20814)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "howdy.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [50 59])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60 73]))                  
+                :type "int")
+                nil [41 251]))          
+    :file "howdy.c"
+    :pointmax 252
+    :fsize 251
+    :lastmodtime '(20237 13555)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "chinese_chess.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [104 122])
+            ("HALF_BITS_LENGTH" variable (:constant-flag t) nil [131 147])
+            ("FULLMASK" variable (:constant-flag t) nil [158 166])
+            ("LMASK" variable (:constant-flag t) nil [179 184])
+            ("RMASK" variable (:constant-flag t) nil [224 229])
+            ("RSET" variable (:constant-flag t) nil [269 273])
+            ("LSET" variable (:constant-flag t) nil [312 316])
+            ("RGET" variable (:constant-flag t) nil [377 381])
+            ("LGET" variable (:constant-flag t) nil [405 409])
+            ("GRIDW" variable (:constant-flag t) nil [455 460])
+            ("main" function
+               (:arguments 
+                  ( ("argv" variable (:type "int") (reparse-symbol arg-sub-list) [474 483])
+                    ("argc" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [484 497]))                  
+                :type "int")
+                nil [464 821]))          
+    :file "chinese_chess.c"
+    :pointmax 822
+    :fsize 851
+    :lastmodtime '(20267 29473)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("RGET" (spp-arg-list ("b") 381 . 384) . ((semantic-list "(RMASK & b)" 385 . 396)))
+          ("RSET" (spp-arg-list ("b" "n") 273 . 279) . ((semantic-list "(b = ((LMASK & b) ^ n))" 280 . 303)))
+          ("LMASK" . ((semantic-list "(FULLMASK << HALF_BITS_LENGTH)" 185 . 215)))
+          ("FULLMASK" . ((number "255" 167 . 170)))
+          ("HALF_BITS_LENGTH" . ((number "4" 148 . 149)))
+          ("LGET" (spp-arg-list ("b") 409 . 412) . ((semantic-list "((LMASK & b) >> HALF_BITS_LENGTH)" 413 . 446)))
+          ("RMASK" . ((semantic-list "(FULLMASK >> HALF_BITS_LENGTH)" 230 . 260)))
+          ("LSET" (spp-arg-list ("b" "n") 316 . 322) . ((semantic-list "(b = ((RMASK & b) ^ (n << HALF_BITS_LENGTH)))" 323 . 368)))
+          ("GRIDW" . ((number "3" 461 . 462)))
+          )
+
+    )
+   (semanticdb-table "chinese_chess_2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [30 39])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40 53]))                  
+                :type "int")
+                nil [21 340]))          
+    :file "chinese_chess_2.c"
+    :pointmax 340
+    :fsize 340
+    :lastmodtime '(20267 30098)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!misc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

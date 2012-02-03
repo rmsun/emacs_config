@@ -1,0 +1,39 @@
+/***********************************************
+Describe: this program is a very simple example
+          of http server
+Date: Nov 14, 2011
+ ***********************************************/
+
+#include "shttpd.h"
+
+extern void Error_400(struct worker_ctl *wctl);
+extern void Error_403(struct worker_ctl *wctl);
+extern void Error_404(struct worker_ctl *wctl);
+extern void Error_505(struct worker_ctl *wctl);
+
+static struct http_header http_headers[] = {
+     {16,    HDR_INT,        OFFSET(cl),        "Content-Length: "        },
+     {14,    HDR_STRING,     OFFSET(ct),        "Content-Type: "          },
+     {12,    HDR_STRING,     OFFSET(useragent), "User-Agent: "            },
+     {19,    HDR_DATE,       OFFSET(ims),       "If-Modified-Since: "     },
+     {15,    HDR_STRING,     OFFSET(auth),      "Authorization: "         },
+     {9,     HDR_STRING,     OFFSET(referer),   "Referer: "               },
+     {8,     HDR_STRING,     OFFSET(cookie),    "Cookie: "                },
+     {10,    HDR_STRING,     OFFSET(location),  "Location: "              },
+     {8,     HDR_INT,        OFFSET(status),    "Status: "                },
+     {7,     HDR_STRING,     OFFSET(range),     "Range: "                 },
+     {12,    HDR_STRING,     OFFSET(connection),"Connection: "            },
+     {19,    HDR_STRING,     OFFSET(transenc),  "Transfer-Encoding: "     },
+     {0,     HDR_INT,        0,                 NULL                      }
+};
+
+extern struct vec _shttpd_methods[];
+struct conf_opts conf_para;
+
+/*
+ * Convert month to the month number. Return -1 on error, or month number
+ */
+static int montoi(char *s)
+{
+     
+          

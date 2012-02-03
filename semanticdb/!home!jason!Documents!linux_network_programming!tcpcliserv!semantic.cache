@@ -1,0 +1,355 @@
+;; Object tcpcliserv/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tcpcliserv/"
+  :tables (list 
+   (semanticdb-table "tcpserv01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35 44])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45 58]))                  
+                :type "int")
+                nil [26 1385]))          
+    :file "tcpserv01.c"
+    :pointmax 1386
+    :fsize 1385
+    :lastmodtime '(20142 44128)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "str_echo01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("str_echo" function
+               (:arguments 
+                  ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [40 51]))                  
+                :type "void")
+                nil [26 313]))          
+    :file "str_echo01.c"
+    :pointmax 314
+    :fsize 313
+    :lastmodtime '(20142 46098)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpcli01.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [34 43])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44 57]))                  
+                :type "int")
+                nil [25 678]))          
+    :file "tcpcli01.c"
+    :pointmax 679
+    :fsize 678
+    :lastmodtime '(20147 56201)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "str_cli.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("Fgets" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38 48])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [49 55])
+                    ("stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56 69]))                  
+                :type "char")
+                nil [26 210])
+            ("str_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [225 234])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [235 246]))                  
+                :type "void")
+                nil [212 736]))          
+    :file "str_cli.c"
+    :pointmax 737
+    :fsize 736
+    :lastmodtime '(20150 26276)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpserv02.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sig_chld" function
+               (:arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [40 50]))                  
+                :type "void")
+                nil [26 171])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [182 191])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [192 205]))                  
+                :type "int")
+                nil [173 1655]))          
+    :file "tcpserv02.c"
+    :pointmax 1533
+    :fsize 1655
+    :lastmodtime '(20150 14874)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpcli02.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [34 43])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44 57]))                  
+                :type "int")
+                nil [25 804]))          
+    :file "tcpcli02.c"
+    :pointmax 805
+    :fsize 804
+    :lastmodtime '(20150 15560)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpserv03.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sig_chld" function
+               (:arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [40 50]))                  
+                :type "void")
+                nil [26 205])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [216 225])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [226 239]))                  
+                :type "int")
+                nil [207 1820]))          
+    :file "tcpserv03.c"
+    :pointmax 1821
+    :fsize 1820
+    :lastmodtime '(20150 23889)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "str_cli1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("Fgets" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38 48])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [49 55])
+                    ("stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56 69]))                  
+                :type "char")
+                nil [26 210])
+            ("str_cli1" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [226 235])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [236 247]))                  
+                :type "void")
+                nil [212 892]))          
+    :file "str_cli1.c"
+    :pointmax 893
+    :fsize 892
+    :lastmodtime '(20151 25292)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpcli_sigpipe.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35 44])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45 58]))                  
+                :type "int")
+                nil [26 680]))          
+    :file "tcpcli_sigpipe.c"
+    :pointmax 681
+    :fsize 680
+    :lastmodtime '(20151 25317)
+    :unmatched-syntax 'nil
+    )
+    (semanticdb-table "tcpserv04.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sig_chld" function
+               (:arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [40 50]))                  
+                :type "void")
+                nil [26 205])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [216 225])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [226 239]))                  
+                :type "int")
+                nil [207 1822]))          
+    :file "tcpserv04.c"
+    :pointmax 1823
+    :fsize 1822
+    :lastmodtime '(20151 28500)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "str_echo04.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "str_echo04.c"
+    :pointmax 506
+    :fsize 514
+    :lastmodtime '(20151 28461)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "sum.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("args" type
+               (:members 
+                  ( ("arg1" variable (:type "long") (reparse-symbol classsubparts) [20 30])
+                    ("arg2" variable (:type "long") (reparse-symbol classsubparts) [36 46]))                  
+                :type "struct")
+                nil [1 49])
+            ("result" type
+               (:members 
+                  ( ("sum" variable (:type "long") (reparse-symbol classsubparts) [71 80]))                  
+                :type "struct")
+                nil [50 83]))          
+    :file "sum.h"
+    :pointmax 95
+    :fsize 94
+    :lastmodtime '(20151 28892)
+    :unmatched-syntax '((semantic-list 64 . 82) (symbol 57 . 63) (STRUCT 50 . 56) (symbol 57 . 63) (STRUCT 50 . 56) (symbol 57 . 63) (STRUCT 50 . 56) (symbol 57 . 61) (STRUCT 50 . 56) (symbol 57 . 60) (STRUCT 50 . 56) (symbol 57 . 60) (STRUCT 50 . 56) (symbol 57 . 60) (STRUCT 50 . 56) (symbol 57 . 59) (STRUCT 50 . 56) (STRUCT 50 . 56) (STRUCT 50 . 56) (symbol 50 . 55) (symbol 50 . 54) (symbol 50 . 52) (semantic-list 13 . 48) (symbol 8 . 12) (STRUCT 1 . 7) (symbol 8 . 12) (STRUCT 1 . 7) (symbol 8 . 12) (STRUCT 1 . 7) (symbol 8 . 11) (STRUCT 1 . 7) (symbol 8 . 10) (STRUCT 1 . 7) (STRUCT 1 . 7) (STRUCT 1 . 7) (symbol 1 . 6) (symbol 1 . 5) (symbol 1 . 4) (symbol 1 . 3))
+    )
+   (semanticdb-table "str_cli2.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sum.h" include nil nil [25 41])
+            ("str_cli" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56 65])
+                    ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [66 77]))                  
+                :type "void")
+                nil [43 630]))          
+    :file "str_cli2.c"
+    :pointmax 631
+    :fsize 630
+    :lastmodtime '(20151 30772)
+    :unmatched-syntax '((symbol 48 . 55) (VOID 43 . 47) (symbol 48 . 54) (VOID 43 . 47) (symbol 48 . 51) (VOID 43 . 47) (symbol 48 . 51) (VOID 43 . 47) (symbol 48 . 50) (VOID 43 . 47) (VOID 43 . 47) (symbol 43 . 45) (string 34 . 36) (symbol 26 . 33) (punctuation 25 . 26) (symbol 26 . 32) (punctuation 25 . 26) (symbol 26 . 31) (punctuation 25 . 26) (symbol 26 . 28) (punctuation 25 . 26) (symbol 25 . 27) (symbol 2 . 9) (punctuation 1 . 2) (symbol 2 . 8) (punctuation 1 . 2) (symbol 2 . 7) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2))
+    )
+   (semanticdb-table "str_echo5.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sum.h" include nil nil [25 41])
+            ("str_echo" function
+               (:arguments 
+                  ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [57 68]))                  
+                :type "void")
+                nil [43 393]))          
+    :file "str_echo5.c"
+    :pointmax 406
+    :fsize 405
+    :lastmodtime '(20151 30423)
+    :unmatched-syntax '((symbol 48 . 56) (VOID 43 . 47) (symbol 48 . 56) (VOID 43 . 47) (symbol 48 . 54) (VOID 43 . 47) (symbol 48 . 53) (VOID 43 . 47) (symbol 48 . 52) (VOID 43 . 47) (symbol 48 . 51) (VOID 43 . 47) (symbol 48 . 50) (VOID 43 . 47) (VOID 43 . 47) (symbol 43 . 45) (symbol 26 . 30) (punctuation 25 . 26) (symbol 26 . 29) (punctuation 25 . 26) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 4) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2) (symbol 2 . 7) (punctuation 1 . 2) (symbol 2 . 6) (punctuation 1 . 2) (symbol 2 . 5) (punctuation 1 . 2))
+    )
+   (semanticdb-table "tcpserv05.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("sig_chld" function
+               (:arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [40 50]))                  
+                :type "void")
+                nil [26 205])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [216 225])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [226 239]))                  
+                :type "int")
+                nil [207 1820]))          
+    :file "tcpserv05.c"
+    :pointmax 1821
+    :fsize 1820
+    :lastmodtime '(20151 30699)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "tcpcli05.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("../lib/unp.h" include nil nil [1 24])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [34 43])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [44 57]))                  
+                :type "int")
+                nil [25 678]))          
+    :file "tcpcli05.c"
+    :pointmax 679
+    :fsize 678
+    :lastmodtime '(20151 31384)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!jason!Documents!linux_network_programming!tcpcliserv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

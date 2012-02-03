@@ -1,0 +1,620 @@
+;; Object linux_network_programming/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linux_network_programming/"
+  :tables (list 
+   (semanticdb-table "serverloop_udp_time.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [217 239])
+            ("sys/socket.h" include (:system-flag t) nil [240 263])
+            ("netinet/in.h" include (:system-flag t) nil [264 287])
+            ("time.h" include (:system-flag t) nil [288 305])
+            ("string.h" include (:system-flag t) nil [306 325])
+            ("stdio.h" include (:system-flag t) nil [326 344])
+            ("error.h" include nil nil [345 363])
+            ("BUFFLEN" variable (:constant-flag t) nil [373 380])
+            ("SERVER_PORT" variable (:constant-flag t) nil [394 405])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [421 430])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [431 444]))                  
+                :type "int")
+                nil [412 1881]))          
+    :file "serverloop_udp_time.c"
+    :pointmax 1883
+    :fsize 2094
+    :lastmodtime '(20138 5136)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 381 . 385)))
+          ("SERVER_PORT" . ((number "8888" 406 . 410)))
+          )
+
+    )
+   (semanticdb-table "error.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("err_dump" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [143 156])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [157 161]))                  
+                :type "void")
+                nil [129 162])
+            ("err_msg" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [201 214])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [215 219]))                  
+                :type "void")
+                nil [188 220])
+            ("err_quit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [235 248])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [249 253]))                  
+                :type "void")
+                nil [221 254])
+            ("err_exit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [269 273])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [274 287])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [288 292]))                  
+                :type "void")
+                nil [255 293])
+            ("err_ret" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [307 320])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [321 325]))                  
+                :type "void")
+                nil [294 326])
+            ("err_sys" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [340 353])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [354 358]))                  
+                :type "void")
+                nil [327 359]))          
+    :file "error.h"
+    :pointmax 360
+    :fsize 359
+    :lastmodtime '(20137 4282)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "error.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [24 42])
+            ("stdlib.h" include (:system-flag t) nil [43 62])
+            ("string.h" include (:system-flag t) nil [63 82])
+            ("errno.h" include (:system-flag t) nil [83 101])
+            ("stdarg.h" include (:system-flag t) nil [133 152])
+            ("error.h" include nil nil [184 202])
+            ("MAXLINE" variable (:constant-flag t) nil [212 219])
+            ("err_doit" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [246 250])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [251 255])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [256 269])
+                    ("" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [270 278]))                  
+                :type "void")
+                nil [225 279])
+            ("err_ret" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [376 392])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [393 397]))                  
+                :type "void")
+                nil [363 479])
+            ("err_sys" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [576 592])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [593 597]))                  
+                :type "void")
+                nil [563 689])
+            ("err_exit" function
+               (:arguments 
+                  ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [832 842])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [843 859])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [860 864]))                  
+                :type "void")
+                nil [818 956])
+            ("err_dump" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1066 1082])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1083 1087]))                  
+                :type "void")
+                nil [1052 1246])
+            ("err_msg" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1345 1361])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1362 1366]))                  
+                :type "void")
+                nil [1332 1444])
+            ("err_quit" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1544 1560])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [1561 1565]))                  
+                :type "void")
+                nil [1530 1653])
+            ("err_doit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("errnoflag" variable (:type "int") (reparse-symbol arg-sub-list) [1757 1771])
+                    ("error" variable (:type "int") (reparse-symbol arg-sub-list) [1772 1782])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1783 1799])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1800 1811]))                  
+                :type "void")
+                nil [1736 2125]))          
+    :file "error.c"
+    :pointmax 2126
+    :fsize 2125
+    :lastmodtime '(20138 1331)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAXLINE" . ((number "4096" 220 . 224)))
+          )
+
+    )
+   (semanticdb-table "client_udp_time.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [200 222])
+            ("sys/socket.h" include (:system-flag t) nil [263 286])
+            ("netinet/in.h" include (:system-flag t) nil [323 346])
+            ("arpa/inet.h" include (:system-flag t) nil [389 411])
+            ("time.h" include (:system-flag t) nil [454 471])
+            ("string.h" include (:system-flag t) nil [499 518])
+            ("stdio.h" include (:system-flag t) nil [519 537])
+            ("error.h" include nil nil [538 556])
+            ("BUFFLEN" variable (:constant-flag t) nil [566 573])
+            ("SERVER_PORT" variable (:constant-flag t) nil [587 598])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [614 623])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [624 637]))                  
+                :type "int")
+                nil [605 1620]))          
+    :file "client_udp_time.c"
+    :pointmax 1632
+    :fsize 1715
+    :lastmodtime '(20138 5870)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 574 . 578)))
+          ("SERVER_PORT" . ((number "8888" 599 . 603)))
+          )
+
+    )
+   (semanticdb-table "serverloop_tcp_time.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("sys/socket.h" include (:system-flag t) nil [24 47])
+            ("netinet/in.h" include (:system-flag t) nil [48 71])
+            ("time.h" include (:system-flag t) nil [72 89])
+            ("string.h" include (:system-flag t) nil [90 109])
+            ("stdio.h" include (:system-flag t) nil [110 128])
+            ("error.h" include nil nil [129 147])
+            ("BUFFLEN" variable (:constant-flag t) nil [157 164])
+            ("SERVER_PORT" variable (:constant-flag t) nil [178 189])
+            ("LISTENQ" variable (:constant-flag t) nil [203 210])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [224 233])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [234 247]))                  
+                :type "int")
+                nil [215 1447]))          
+    :file "serverloop_tcp_time.c"
+    :pointmax 1446
+    :fsize 1447
+    :lastmodtime '(20138 19682)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 165 . 169)))
+          ("SERVER_PORT" . ((number "8888" 190 . 194)))
+          ("LISTENQ" . ((number "10" 211 . 213)))
+          )
+
+    )
+   (semanticdb-table "client_tcp_time.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("sys/socket.h" include (:system-flag t) nil [24 47])
+            ("netinet/in.h" include (:system-flag t) nil [48 71])
+            ("string.h" include (:system-flag t) nil [72 91])
+            ("stdio.h" include (:system-flag t) nil [92 110])
+            ("error.h" include nil nil [111 129])
+            ("BUFFLEN" variable (:constant-flag t) nil [139 146])
+            ("SERVER_PORT" variable (:constant-flag t) nil [160 171])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [187 196])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [197 210]))                  
+                :type "int")
+                nil [178 993]))          
+    :file "client_tcp_time.c"
+    :pointmax 994
+    :fsize 993
+    :lastmodtime '(20138 19506)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 147 . 151)))
+          ("SERVER_PORT" . ((number "8888" 172 . 176)))
+          )
+
+    )
+   (semanticdb-table "server_concurrence.udp.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [217 239])
+            ("sys/socket.h" include (:system-flag t) nil [240 263])
+            ("netinet/in.h" include (:system-flag t) nil [264 287])
+            ("time.h" include (:system-flag t) nil [288 305])
+            ("string.h" include (:system-flag t) nil [306 325])
+            ("stdio.h" include (:system-flag t) nil [326 344])
+            ("stdlib.h" include (:system-flag t) nil [345 364])
+            ("signal.h" include (:system-flag t) nil [365 384])
+            ("error.h" include nil nil [385 403])
+            ("BUFFLEN" variable (:constant-flag t) nil [413 420])
+            ("SERVER_PORT" variable (:constant-flag t) nil [434 445])
+            ("CLDNUM" variable (:constant-flag t) nil [459 465])
+            ("handle_connect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sockfd" variable (:type "int") (reparse-symbol arg-sub-list) [496 507]))                  
+                :type "void")
+                nil [469 1119])
+            ("sig_int" function
+               (:arguments 
+                  ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [1134 1142]))                  
+                :type "void")
+                nil [1121 1161])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1173 1182])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1183 1196]))                  
+                :type "int")
+                nil [1164 2306]))          
+    :file "server_concurrence.udp.c"
+    :pointmax 2309
+    :fsize 2464
+    :lastmodtime '(20142 36997)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 421 . 425)))
+          ("CLDNUM" . ((number "2" 466 . 467)))
+          ("SERVER_PORT" . ((number "8888" 446 . 450)))
+          )
+
+    )
+   (semanticdb-table ""
+    :file ""
+    :fsize 4096
+    :lastmodtime '(20145 63629)
+    )
+   (semanticdb-table "config.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("CPU_VENDOR_OS" variable (:constant-flag t) nil [156 169])
+            ("HAVE_ADDRINFO_STRUCT" variable (:constant-flag t) nil [254 274])
+            ("HAVE_ARPA_INET_H" variable (:constant-flag t) nil [347 363])
+            ("HAVE_BZERO" variable (:constant-flag t) nil [427 437])
+            ("HAVE_ERRNO_H" variable (:constant-flag t) nil [767 779])
+            ("HAVE_FCNTL_H" variable (:constant-flag t) nil [848 860])
+            ("HAVE_GETADDRINFO" variable (:constant-flag t) nil [930 946])
+            ("HAVE_GETADDRINFO_PROTO" variable (:constant-flag t) nil [1012 1034])
+            ("HAVE_GETHOSTBYNAME2" variable (:constant-flag t) nil [1107 1126])
+            ("HAVE_GETHOSTBYNAME_R" variable (:constant-flag t) nil [1200 1220])
+            ("HAVE_GETHOSTNAME" variable (:constant-flag t) nil [1290 1306])
+            ("HAVE_GETHOSTNAME_PROTO" variable (:constant-flag t) nil [1373 1395])
+            ("HAVE_GETNAMEINFO" variable (:constant-flag t) nil [1465 1481])
+            ("HAVE_GETNAMEINFO_PROTO" variable (:constant-flag t) nil [1547 1569])
+            ("HAVE_GETRUSAGE_PROTO" variable (:constant-flag t) nil [1640 1660])
+            ("HAVE_HSTRERROR" variable (:constant-flag t) nil [1728 1742])
+            ("HAVE_HSTRERROR_PROTO" variable (:constant-flag t) nil [1806 1826])
+            ("HAVE_IF_NAMEINDEX_STRUCT" variable (:constant-flag t) nil [1898 1922])
+            ("HAVE_IF_NAMETOINDEX" variable (:constant-flag t) nil [1995 2014])
+            ("HAVE_IF_NAMETOINDEX_PROTO" variable (:constant-flag t) nil [2084 2109])
+            ("HAVE_INET6_RTH_INIT" variable (:constant-flag t) nil [2182 2201])
+            ("HAVE_INET_ATON" variable (:constant-flag t) nil [2269 2283])
+            ("HAVE_INET_ATON_PROTO" variable (:constant-flag t) nil [2351 2371])
+            ("HAVE_INET_PTON" variable (:constant-flag t) nil [2439 2453])
+            ("HAVE_INET_PTON_PROTO" variable (:constant-flag t) nil [2521 2541])
+            ("HAVE_LIBPTHREAD" variable (:constant-flag t) nil [2859 2874])
+            ("HAVE_MKSTEMP" variable (:constant-flag t) nil [3213 3225])
+            ("HAVE_MSGHDR_MSG_CONTROL" variable (:constant-flag t) nil [3299 3322])
+            ("HAVE_NETDB_H" variable (:constant-flag t) nil [3483 3495])
+            ("HAVE_NETINET_IN_H" variable (:constant-flag t) nil [3655 3672])
+            ("HAVE_POLL" variable (:constant-flag t) nil [3827 3836])
+            ("HAVE_POLL_H" variable (:constant-flag t) nil [3904 3915])
+            ("HAVE_PSELECT" variable (:constant-flag t) nil [3981 3993])
+            ("HAVE_PSELECT_PROTO" variable (:constant-flag t) nil [4058 4076])
+            ("HAVE_PTHREAD_H" variable (:constant-flag t) nil [4147 4161])
+            ("HAVE_SIGNAL_H" variable (:constant-flag t) nil [4231 4244])
+            ("HAVE_SNPRINTF" variable (:constant-flag t) nil [4311 4324])
+            ("HAVE_SNPRINTF_PROTO" variable (:constant-flag t) nil [4387 4406])
+            ("HAVE_SOCKATMARK" variable (:constant-flag t) nil [4671 4686])
+            ("HAVE_SOCKATMARK_PROTO" variable (:constant-flag t) nil [4756 4777])
+            ("HAVE_STDIO_H" variable (:constant-flag t) nil [4846 4858])
+            ("HAVE_STDLIB_H" variable (:constant-flag t) nil [4928 4941])
+            ("HAVE_STRINGS_H" variable (:constant-flag t) nil [5012 5026])
+            ("HAVE_STRING_H" variable (:constant-flag t) nil [5096 5109])
+            ("HAVE_STROPTS_H" variable (:constant-flag t) nil [5180 5194])
+            ("HAVE_STRUCT_IFREQ_IFR_MTU" variable (:constant-flag t) nil [5266 5291])
+            ("HAVE_STRUCT_SOCKADDR_STORAGE" variable (:constant-flag t) nil [5375 5403])
+            ("HAVE_SYS_IOCTL_H" variable (:constant-flag t) nil [5660 5676])
+            ("HAVE_SYS_PARAM_H" variable (:constant-flag t) nil [5749 5765])
+            ("HAVE_SYS_SELECT_H" variable (:constant-flag t) nil [5839 5856])
+            ("HAVE_SYS_SOCKET_H" variable (:constant-flag t) nil [5930 5947])
+            ("HAVE_SYS_STAT_H" variable (:constant-flag t) nil [6113 6128])
+            ("HAVE_SYS_SYSCTL_H" variable (:constant-flag t) nil [6202 6219])
+            ("HAVE_SYS_TIME_H" variable (:constant-flag t) nil [6291 6306])
+            ("HAVE_SYS_TYPES_H" variable (:constant-flag t) nil [6379 6395])
+            ("HAVE_SYS_UIO_H" variable (:constant-flag t) nil [6466 6480])
+            ("HAVE_SYS_UN_H" variable (:constant-flag t) nil [6550 6563])
+            ("HAVE_SYS_WAIT_H" variable (:constant-flag t) nil [6635 6650])
+            ("HAVE_TIMESPEC_STRUCT" variable (:constant-flag t) nil [6732 6752])
+            ("HAVE_TIME_H" variable (:constant-flag t) nil [6820 6831])
+            ("HAVE_UNISTD_H" variable (:constant-flag t) nil [6901 6914])
+            ("HAVE_VSNPRINTF" variable (:constant-flag t) nil [6982 6996])
+            ("IPV4" variable (:constant-flag t) nil [7224 7228])
+            ("IPV6" variable (:constant-flag t) nil [7286 7290])
+            ("IPv4" variable (:constant-flag t) nil [7348 7352])
+            ("IPv6" variable (:constant-flag t) nil [7410 7414])
+            ("MCAST" variable (:constant-flag t) nil [7480 7485])
+            ("PACKAGE_BUGREPORT" variable (:constant-flag t) nil [7576 7593])
+            ("PACKAGE_NAME" variable (:constant-flag t) nil [7653 7665])
+            ("PACKAGE_STRING" variable (:constant-flag t) nil [7737 7751])
+            ("PACKAGE_TARNAME" variable (:constant-flag t) nil [7823 7838])
+            ("PACKAGE_VERSION" variable (:constant-flag t) nil [7896 7911])
+            ("STDC_HEADERS" variable (:constant-flag t) nil [8073 8085])
+            ("TIME_WITH_SYS_TIME" variable (:constant-flag t) nil [8173 8191])
+            ("UNIXDOMAIN" variable (:constant-flag t) nil [8264 8274])
+            ("UNIXdomain" variable (:constant-flag t) nil [8347 8357])
+            ("t_scalar_t" variable (:constant-flag t) nil [8900 8910]))          
+    :file "config.h"
+    :pointmax 9120
+    :fsize 9119
+    :lastmodtime '(20142 43790)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("HAVE_ARPA_INET_H" . ((number "1" 364 . 365)))
+          ("HAVE_GETHOSTNAME_PROTO" . ((number "1" 1396 . 1397)))
+          ("HAVE_MKSTEMP" . ((number "1" 3226 . 3227)))
+          ("HAVE_SYS_STAT_H" . ((number "1" 6129 . 6130)))
+          ("IPV6" . ((number "1" 7291 . 7292)))
+          ("HAVE_INET_PTON" . ((number "1" 2454 . 2455)))
+          ("HAVE_POLL" . ((number "1" 3837 . 3838)))
+          ("HAVE_SOCKATMARK_PROTO" . ((number "1" 4778 . 4779)))
+          ("HAVE_STRINGS_H" . ((number "1" 5027 . 5028)))
+          ("HAVE_SYS_UIO_H" . ((number "1" 6481 . 6482)))
+          ("HAVE_SYS_WAIT_H" . ((number "1" 6651 . 6652)))
+          ("HAVE_VSNPRINTF" . ((number "1" 6997 . 6998)))
+          ("IPv6" . ((number "1" 7415 . 7416)))
+          ("CPU_VENDOR_OS" . ((string "\"i686-pc-linux-gnu\"" 170 . 189)))
+          ("HAVE_FCNTL_H" . ((number "1" 861 . 862)))
+          ("HAVE_STRING_H" . ((number "1" 5110 . 5111)))
+          ("HAVE_SYS_IOCTL_H" . ((number "1" 5677 . 5678)))
+          ("HAVE_SYS_TYPES_H" . ((number "1" 6396 . 6397)))
+          ("HAVE_UNISTD_H" . ((number "1" 6915 . 6916)))
+          ("PACKAGE_BUGREPORT" . ((string "\"\"" 7594 . 7596)))
+          ("HAVE_ERRNO_H" . ((number "1" 780 . 781)))
+          ("HAVE_GETHOSTBYNAME2" . ((number "1" 1127 . 1128)))
+          ("HAVE_GETHOSTBYNAME_R" . ((number "1" 1221 . 1222)))
+          ("HAVE_INET6_RTH_INIT" . ((number "1" 2202 . 2203)))
+          ("HAVE_INET_PTON_PROTO" . ((number "1" 2542 . 2543)))
+          ("HAVE_PSELECT_PROTO" . ((number "1" 4077 . 4078)))
+          ("HAVE_SIGNAL_H" . ((number "1" 4245 . 4246)))
+          ("HAVE_STDLIB_H" . ((number "1" 4942 . 4943)))
+          ("HAVE_SYS_UN_H" . ((number "1" 6564 . 6565)))
+          ("MCAST" . ((number "1" 7486 . 7487)))
+          ("PACKAGE_NAME" . ((string "\"\"" 7666 . 7668)))
+          ("HAVE_GETRUSAGE_PROTO" . ((number "1" 1661 . 1662)))
+          ("HAVE_INET_ATON" . ((number "1" 2284 . 2285)))
+          ("HAVE_PTHREAD_H" . ((number "1" 4162 . 4163)))
+          ("HAVE_SYS_SYSCTL_H" . ((number "1" 6220 . 6221)))
+          ("PACKAGE_VERSION" . ((string "\"\"" 7912 . 7914)))
+          ("HAVE_IF_NAMEINDEX_STRUCT" . ((number "1" 1923 . 1924)))
+          ("HAVE_MSGHDR_MSG_CONTROL" . ((number "1" 3323 . 3324)))
+          ("HAVE_STDIO_H" . ((number "1" 4859 . 4860)))
+          ("HAVE_STRUCT_IFREQ_IFR_MTU" . ((number "1" 5292 . 5293)))
+          ("HAVE_STRUCT_SOCKADDR_STORAGE" . ((number "1" 5404 . 5405)))
+          ("STDC_HEADERS" . ((number "1" 8086 . 8087)))
+          ("HAVE_NETINET_IN_H" . ((number "1" 3673 . 3674)))
+          ("HAVE_SYS_SOCKET_H" . ((number "1" 5948 . 5949)))
+          ("TIME_WITH_SYS_TIME" . ((number "1" 8192 . 8193)))
+          ("UNIXDOMAIN" . ((number "1" 8275 . 8276)))
+          ("t_scalar_t" . ((symbol "int32_t" 8911 . 8918)))
+          ("HAVE_GETADDRINFO_PROTO" . ((number "1" 1035 . 1036)))
+          ("HAVE_GETHOSTNAME" . ((number "1" 1307 . 1308)))
+          ("HAVE_LIBPTHREAD" . ((number "1" 2875 . 2876)))
+          ("HAVE_SYS_SELECT_H" . ((number "1" 5857 . 5858)))
+          ("HAVE_SYS_TIME_H" . ((number "1" 6307 . 6308)))
+          ("PACKAGE_STRING" . ((string "\"\"" 7752 . 7754)))
+          ("HAVE_BZERO" . ((number "1" 438 . 439)))
+          ("HAVE_GETNAMEINFO" . ((number "1" 1482 . 1483)))
+          ("HAVE_IF_NAMETOINDEX" . ((number "1" 2015 . 2016)))
+          ("HAVE_IF_NAMETOINDEX_PROTO" . ((number "1" 2110 . 2111)))
+          ("HAVE_TIMESPEC_STRUCT" . ((number "1" 6753 . 6754)))
+          ("HAVE_TIME_H" . ((number "1" 6832 . 6833)))
+          ("HAVE_POLL_H" . ((number "1" 3916 . 3917)))
+          ("HAVE_PSELECT" . ((number "1" 3994 . 3995)))
+          ("HAVE_SNPRINTF" . ((number "1" 4325 . 4326)))
+          ("HAVE_SNPRINTF_PROTO" . ((number "1" 4407 . 4408)))
+          ("HAVE_GETNAMEINFO_PROTO" . ((number "1" 1570 . 1571)))
+          ("HAVE_HSTRERROR" . ((number "1" 1743 . 1744)))
+          ("HAVE_INET_ATON_PROTO" . ((number "1" 2372 . 2373)))
+          ("HAVE_SYS_PARAM_H" . ((number "1" 5766 . 5767)))
+          ("PACKAGE_TARNAME" . ((string "\"\"" 7839 . 7841)))
+          ("HAVE_ADDRINFO_STRUCT" . ((number "1" 275 . 276)))
+          ("HAVE_GETADDRINFO" . ((number "1" 947 . 948)))
+          ("HAVE_HSTRERROR_PROTO" . ((number "1" 1827 . 1828)))
+          ("HAVE_NETDB_H" . ((number "1" 3496 . 3497)))
+          ("HAVE_SOCKATMARK" . ((number "1" 4687 . 4688)))
+          ("IPV4" . ((number "1" 7229 . 7230)))
+          ("HAVE_STROPTS_H" . ((number "1" 5195 . 5196)))
+          ("IPv4" . ((number "1" 7353 . 7354)))
+          ("UNIXdomain" . ((number "1" 8358 . 8359)))
+          )
+
+    )
+   (semanticdb-table "server_multithread01.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "server_multithread01.c"
+    :pointmax 335
+    :fsize 1873
+    :lastmodtime '(20143 39513)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "server_multiplex.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("sys/socket.h" include (:system-flag t) nil [24 47])
+            ("netinet/in.h" include (:system-flag t) nil [48 71])
+            ("time.h" include (:system-flag t) nil [72 89])
+            ("string.h" include (:system-flag t) nil [90 109])
+            ("stdlib.h" include (:system-flag t) nil [110 129])
+            ("stdio.h" include (:system-flag t) nil [130 148])
+            ("pthread.h" include (:system-flag t) nil [149 169])
+            ("sys/select.h" include (:system-flag t) nil [170 193])
+            ("error.h" include nil nil [194 212])
+            ("BUFFLEN" variable (:constant-flag t) nil [222 229])
+            ("SERVER_PORT" variable (:constant-flag t) nil [243 254])
+            ("LISTENQ" variable (:constant-flag t) nil [268 275])
+            ("CLINUM" variable (:constant-flag t) nil [286 292])
+            ("connect_host" variable
+               (:dereference 1
+                :type "int")
+                nil [299 324])
+            ("connect_number" variable (:type "int") nil [353 376])
+            ("handle_connect" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [406 416]))                  
+                :type "void")
+                nil [378 2621])
+            ("handle_request" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2651 2661]))                  
+                :type "void")
+                nil [2623 3419])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3457 3466])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3467 3480]))                  
+                :type "int")
+                nil [3448 4627]))          
+    :file "server_multiplex.c"
+    :pointmax 4629
+    :fsize 5140
+    :lastmodtime '(20144 60578)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BUFFLEN" . ((number "1024" 210 . 214)))
+          ("CLINUM" . ((number "1024" 273 . 277)))
+          ("SERVER_PORT" . ((number "8888" 235 . 239)))
+          ("LISTENQ" . ((number "5" 256 . 257)))
+          )
+
+    )
+   )
+  :file "!home!jason!Documents!linux_network_programming!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+     char ch1, ch2;
+     scanf("%c", &ch1);
+     scanf("%c", &ch2);
+     printf("%d %d", ch1, ch2);
+     return 0;
+}

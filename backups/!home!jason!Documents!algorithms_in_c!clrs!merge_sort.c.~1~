@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define flag 10000
+void
+merge(int a[], int p, int q, int r)
+{
+     int n1 = q - p + 1, n2 = r - q;
+     int left[n1], right[n2];
+     int i, j, k;
+  
+     for (i = 0; i < n1; i++)
+          left[i] = a[p+i];
+     for (j = 0; j < n2; j++)
+          right[j] = a[q+j];
+     //left[n1] = flag;
+     //right[n2] = flag;
+     
+     for (k = 0; i != n1 && j != n2; k++)
+     {
+          if (right[j] > left[i])
+          {
+               a[k] = right[j];
+               j++;
+          }
+          else
+          {
+               a[k] = left[i];
+               i++;
+          }
+     }
+     
+          

@@ -1,0 +1,27 @@
+;;setting for worklog.
+(require 'worklog)
+(setq worklog-file "~/worklog")
+(setq worklog-automatic-login t)
+
+(add-hook 'emacs-startup-hook
+          (function (lambda ()
+                      (worklog-do-task "Hacking emacs" t)
+                      )))
+
+(add-hook 'kill-emacs-hook
+          (function (lambda ()
+                      (worklog-do-task "logout" t)
+                      (worklog-finish)
+                      )))
+
+(defun worklog-quick-start (task)
+  (interactive "sTask: ")
+  (let (curbuf (current-buffer))
+    (worklog-do-task task t)
+    (switch-to-buffer curbuf t)))
+
+(defun worklog-quick-stop ()
+  (interactive)
+  (let (curbuf (current-buffer))
+    (worklog-task-stop)
+    (switch-to-buffer curbuf t)))

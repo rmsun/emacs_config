@@ -1,0 +1,36 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jason/Documents/webserver/lighttpd-1.4.29/" . "src/")
+ ("/home/jason/Documents/webserver/" . "lighttpd-1.4.29/")
+ ("/home/jason/Documents/" . "webserver/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jason/Documents/webserver/lighttpd-1.4.29/src/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "configparser.y"
+ "configfile.c"
+ "server.c"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jason/Documents/webserver/lighttpd-1.4.29/src/" (20215 6154) "inet_ntop_cache.c" "proc_open.h" "network.c" "request.h" "joblist.c" "mod_ssi_expr.c" "buffer.h" "mod_ssi_exprparser.y" "mod_cml.c" "mod_ssi.c" "Makefile.am" "network_linux_sendfile.c" "mod_simple_vhost.c" "mod_ssi_expr.h" "mod_setenv.c" "http_auth.c" "mod_cml.h" "md5.h" "fastcgi.h" "server.h" "server.c" "connections-glue.c" "network_openssl.c" "data_count.c" "lemon.c" "log.c" "mod_redirect.c" "mod_rewrite.c" "keyvalue.h" "mod_status.c" "lempar.c" "../" "mod_secure_download.c" "response.c" "configparser.c" "mod_alias.c" "data_string.c" "chunk.h" "mod_dirlisting.c" "request.c" "fdevent.h" "#fdevent.h#" "array.h" "crc32.c" "data_integer.c" "http-header-glue.c" "mod_magnet.c" "stream.h" "mod_usertrack.c" "mod_ssi_exprparser.h" "mod_rrdtool.c" "sys-socket.h" "fdevent_poll.c" "mod_expire.c" "lighttpd-angel.c" "base.h" "connections.h" "http_auth_digest.c" "Makefile.in" "mod_webdav.c" "fdevent_freebsd_kqueue.c" "SConscript" "mod_cgi.c" "bitset.c" "fdevent.c" "chunk.c" "mod_cml_funcs.h" "inet_ntop_cache.h" "status_counter.h" "mod_fastcgi.c" "response.h" "bitset.h" "mod_auth.h" "network.h" "network_solaris_sendfilev.c" "plugin.h" "network_backends.h" "mod_magnet_cache.h" "TAGS" "version.h" "mod_flv_streaming.c" "mod_staticfile.c" "plugin.c" "network_writev.c" "mod_compress.c" "fdevent_select.c" "joblist.h" "mod_auth.c" "http_auth.h" "fdevent_solaris_port.c" "data_array.c" "./" "mod_cml_funcs.c" "fdevent_libev.c" "configparser.h" "md5.c" "mod_mysql_vhost.c" "http_chunk.h" "sys-mmap.h" "stream.c" "stat_cache.c" "configparser.y" "proc_open.c" "etag.h" "data_fastcgi.c" "mod_indexfile.c" "settings.h" "mod_ssi_exprparser.c" "mod_proxy.c" "mod_evhost.c" "mod_userdir.c" "mod_extforward.c" "mod_scgi.c" "mod_ssi.h" "keyvalue.c" "configfile.c" "splaytree.c" "fdevent_linux_sysepoll.c" "stat_cache.h" "connections.c" "configfile-glue.c" "mod_evasive.c" "mod_cml_lua.c" "array.c" "mod_accesslog.c" "mod_trigger_b4_dl.c" "network_write.c" "data_config.c" "http_chunk.c" "http_auth_digest.h" "log.h" "configfile.h" "mod_skeleton.c" "fdevent_solaris_devpoll.c" "buffer.c" "mod_access.c" "status_counter.c" "splaytree.h" "network_freebsd_sendfile.c" "mod_magnet_cache.c" "crc32.h" "etag.c")
+
+ ("/home/jason/Documents/webserver/lighttpd-1.4.29/" (20211 59322) "ltmain.sh" "Makefile.am" "COPYING" "config.guess" "src/" "autogen.sh" "../" "config.h.in" "README" "configure.ac" "doc/" "Makefile.in" "missing" "./" "INSTALL" "depcomp" "compile" "NEWS" "AUTHORS" "m4/" "install-sh" "configure" "tests/" "SConstruct" "distribute.sh.in" "aclocal.m4" "config.sub")
+
+ ("/home/jason/Documents/webserver/" (20182 14406) "../" "lighttpd-1.4.29/" "./" "apache/" "lighttpd_analysis/")
+
+ ("/home/jason/Documents/" (20189 49583) "p2p source code/" "scripts/" "config_bak/" "webserver/" "Overlay network.doc" "../" "PlanetLab.xls" "PlanetLab联系方式.ods" "linux_network_programming/" "NDN Overlay network.doc" "misc/" "kernel/" "algorithms_in_c/" "./" "unp/" ".example1.txt.swp" "myapue/" "apue/" "initram/")
+
+ ("/home/jason/" (20215 53836) ".tencent/" ".config/" ".fehbg" ".fonts.conf~" ".pki/" "Notes/" "Pictures/" ".gnupg/" "../" "PlanetLab/" ".ssh/" ".bashrc" ".Xresources" ".gconfd/" ".icons/" ".foxrc/" "Music/" ".xinitrc" ".cache/" ".wicd/" ".recently-used" ".mplayer/" ".vimrc" ".gitconfig" ".gconf/" ".emacs.d/" ".flashget/" ".srecode/" ".ncmpcpp/" ".vim/" ".Foxit/" ".mozilla/" ".ecb-tip-of-day.el" ".ibus/" ".tkenvrc" ".adobe/" "mynote/" ".xarchive/" "./" "vanet/" ".bash_history" ".xmodmap" ".local/" ".kde4/" "tmp/" ".Xauthority" ".swt/" ".wishname" ".aliedit/" ".bash_profile" ".viminfo" ".emacs" ".macromedia/" ".eshell/" ".fontconfig/" ".dbus/" "Video/" "Documents/" ".fonts.conf.bak" ".lesshst" "Downloads/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

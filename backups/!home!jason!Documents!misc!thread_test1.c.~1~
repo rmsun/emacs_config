@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+#define NLOOP 5000
+int counter;
+
+void *thr_fn(void *arg)
+{
+     int i, val;
+     for (i = 0; i < NLOOP; i++)
+     {
+          val = counter;
+          printf ("%x : %d\n", (unsigned int)pthread_self(), val+1);
+          counter = val + 1;
+     }
+     return((void *)0);
+}
